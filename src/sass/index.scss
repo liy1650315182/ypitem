@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import "header";
+@import "footer";
+//重置样式
+b,strong{
+    font-weight: 700px;
+}
+.container {
+    width: 1210px;
+    margin: 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.clearfix::after{
+    content: " ";clear: both; display: block;height: 0;overflow: hidden;visibility: hidden;
+}
+a{
+    text-decoration: none;
+    color: #333;
+    transition: color .2s;
+    &:hover{
+        color:#ff6600;
+    }
+}
+li{
+    list-style: none;
+}
+img{
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+}
+html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p{
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+    font-weight: normal;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #333;
+}
+//banner_lunbo
+.banner_lunbo{
+    height: 450px;
+    width: 100%;
+    position: relative;
+}
+.lunbo_img{
+    position: relative;
+    li{
+        background: rgb(223, 0, 77);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: list-item;
+        opacity: 1;
+        width: 100% !important;
+        height: 450px;
+    } 
+    .img{
+        width: 770px;
+        margin-left: 210px;
+        position: relative;
+    }
+}
+//tab切换和快速查找
+.tab_quickbtn{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: 380px;
+    width: 220px;
+    height: 450px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+.banner_tab{
+    text-align: left;
+    overflow: hidden;
+    height: 208px;
+    .tab_title{
+        height: 38px;
+        line-height: 38px;
+        padding: 0 10px 0 10px;
+        border-bottom: 1px solid #e8e8e8;
+        position: relative;
+        ul{
+            float: left;
+            position: absolute;
+            left: 10px;
+            height: 38px;
+        }
+        li{
+            float: left;
+            margin: 0 10px;
+            padding: 0 1px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .on{
+            height: 38px;
+            color: #ff6600;
+            border-bottom: 3px solid #ff6600;
+        }
+    }
+    .tab_content{
+        ul{
+            padding: 10px 15px;
+        }
+        li{
+            height: 25px;
+            font-size: 12px;
+            line-height: 25px;
+            overflow: hidden;
+        }
+    }
+}
+//快速查找
+.quickbtn{
+    border-width: 1px 0px 0px 0;
+    border-color: #e8e8e8;
+    border-style: solid;
+    width: 222px;
+    overflow: hidden;
+    li{
+        float: left;
+        width: 74px;
+        height: 80px;
+        border-width: 0px 1px 1px 0px;
+        border-color: #e8e8e8;
+        border-style: solid;
+        text-align: center;
+    }
+    li:nth-child(3n) {
+        border-width: 0px 0 1px 0px;
+    }
+    a{
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        padding-top: 8px;
+        height: 80px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    .icon{
+        font-size: 2pc;
+        line-height: 43px;
+        transition: font-size .25s ease-out 0s;
+    }
+}
+

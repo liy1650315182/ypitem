@@ -1,0 +1,267 @@
+@charset "utf-8";
+//header的顶部图片
+.header_img {
+    background: #fc7a00;
+
+    .pic {
+        display: block;
+        width: 1210px;
+        height: 100px;
+        margin: 0 auto;
+        background: url(http://10.31.162.37/js/ingping/src/images/top_img1.jpg) no-repeat;
+    }
+}
+
+//header中部的导航
+.header_nav {
+    height: 36px;
+    position: relative;
+    line-height: 36px;
+    border-bottom: 1px solid #EDEEF0;
+    background-color: #FCFCFC;
+}
+
+//header中部的左部导航
+.tnleft {
+    float: left;
+
+    h5 {
+        font-size: 12px;
+    }
+
+    #login_info {
+        color: #666;
+    }
+
+    #user_info {
+        color: #ddd;
+
+        .track {
+            color: #ff6600;
+            padding: 8px 5px;
+        }
+    }
+}
+
+//header中部的右部导航
+.tnright {
+    float: right;
+
+    dd {
+        float: left;
+        position: relative;
+    }
+    h3{
+        float: left;
+    }
+    a{
+        line-height: 37px;
+        border: 1px solid #fcfcfc;
+        font-size: 12px;
+        padding: 9px 20px 8px;
+        box-sizing: border-box;
+    }
+    em{
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        margin: 0 0 0 5px;
+        overflow: hidden;
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 13px;
+        background: url(../images/topNav_select.png);
+    }
+}
+
+//header的主要内容
+.header_logonav {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    #logo {
+        width: 220px;
+        float: left;
+    }
+
+    .logo_ad {
+        width: 190px;
+        text-align: center;
+        float: left;
+    }
+//搜索框
+    .search {
+        width: 560px;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .search_nav {
+        position: relative;
+        margin: 18px 0 0 0;
+    }
+
+    .searchbox {
+        float: left;
+        border: 2px solid #ff6600;
+        border-right: 0;
+        position: relative;
+        background: #fff;
+
+        .search-keyword {
+            width: 458px;
+            height: 32px;
+            margin-top: 0;
+            padding: 8px 10px 8px 0;
+            border: 0;
+            font-size: 14px;
+            padding-left: 10px;
+            line-height: 18px;
+            color: #999;
+            outline: none;
+        }
+    }
+
+    .search-btn {
+        width: 90px;
+        height: 36px;
+        margin-top: 0;
+        text-align: center;
+        border: 0;
+        cursor: pointer;
+        background: #ff6600;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: #fff;
+    }
+//搜索框的导航
+    .navbox {
+        float: left;
+        width: 100%;
+        height: 18px;
+        margin-top: 7px;
+        overflow: hidden;
+
+        a {
+            float: left;
+            margin-right: 10px;
+            white-space: nowrap;
+            font-size: 12px;
+            color: #666;
+
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+//header的right部分
+    .phonepics {
+        float: right;
+        margin-top: 17px;
+        position: relative;
+
+        .imgleft {
+            margin-right: 14px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        b {
+            width: 1px;
+            height: 34px;
+            background: #ddd;
+            right: 85px;
+            top: 3px;
+            display: inline-block;
+            position: absolute;
+            font-weight: 700px;
+        }
+    }
+}
+//header的总导航部分
+.nav_bar {
+    position: relative;
+}
+//全部商品分类
+.all {
+    width: 210px;
+    height: 40px;
+    background: #ff6600;
+    float: left; 
+    ul {
+        z-index: 99999;
+        position: absolute;
+        background-color: rgba(50, 50, 50, 0.9);
+        width: 210px;
+        height: 450px;
+        top: 40px;
+        left: 0px;
+        li {
+            padding: 11px 0 9px 15px;
+            zoom: 1;
+            cursor: default;
+            border-bottom: 1px solid #555;
+        }
+    }
+}
+.allbtn {
+    z-index: 99999;
+    position: relative;
+}
+
+h2 a {
+    box-sizing: border-box;
+    line-height: 40px;
+    background-color: #ff6600;
+    padding-left: 15px;
+    width: 210px;
+    display: block;
+    height: 40px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    &:hover{
+        color: #fff;
+    }
+}
+.topli a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.botli{
+    padding-top: 1px;
+    line-height: 22px;
+    a {
+        color: #999;
+        font-size: 12px;
+    }
+} 
+//总导航
+.nav_index {
+    position: absolute;
+    left: 210px;
+    height: 40px;
+    li{
+        margin-left: 50px;
+        float: left;
+        a{
+            position: relative;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            &:hover{
+                color:#ff5600;;
+            }
+        }
+    }
+}
+//导航右边的小轮播图
+.nav_right{
+    float: right;
+}

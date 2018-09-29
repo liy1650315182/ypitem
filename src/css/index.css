@@ -1,0 +1,536 @@
+.header_img {
+  background: #fc7a00;
+}
+.header_img .pic {
+  display: block;
+  width: 1210px;
+  height: 100px;
+  margin: 0 auto;
+  background: url(http://10.31.162.37/js/ingping/src/images/top_img1.jpg) no-repeat;
+}
+
+.header_nav {
+  height: 36px;
+  position: relative;
+  line-height: 36px;
+  border-bottom: 1px solid #EDEEF0;
+  background-color: #FCFCFC;
+}
+
+.tnleft {
+  float: left;
+}
+.tnleft h5 {
+  font-size: 12px;
+}
+.tnleft #login_info {
+  color: #666;
+}
+.tnleft #user_info {
+  color: #ddd;
+}
+.tnleft #user_info .track {
+  color: #ff6600;
+  padding: 8px 5px;
+}
+
+.tnright {
+  float: right;
+}
+.tnright dd {
+  float: left;
+  position: relative;
+}
+.tnright h3 {
+  float: left;
+}
+.tnright a {
+  line-height: 37px;
+  border: 1px solid #fcfcfc;
+  font-size: 12px;
+  padding: 9px 20px 8px;
+  box-sizing: border-box;
+}
+.tnright em {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  margin: 0 0 0 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 13px;
+  background: url(../images/topNav_select.png);
+}
+
+.header_logonav {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.header_logonav #logo {
+  width: 220px;
+  float: left;
+}
+.header_logonav .logo_ad {
+  width: 190px;
+  text-align: center;
+  float: left;
+}
+.header_logonav .search {
+  width: 560px;
+  float: left;
+  margin-left: 10px;
+}
+.header_logonav .search_nav {
+  position: relative;
+  margin: 18px 0 0 0;
+}
+.header_logonav .searchbox {
+  float: left;
+  border: 2px solid #ff6600;
+  border-right: 0;
+  position: relative;
+  background: #fff;
+}
+.header_logonav .searchbox .search-keyword {
+  width: 458px;
+  height: 32px;
+  margin-top: 0;
+  padding: 8px 10px 8px 0;
+  border: 0;
+  font-size: 14px;
+  padding-left: 10px;
+  line-height: 18px;
+  color: #999;
+  outline: none;
+}
+.header_logonav .search-btn {
+  width: 90px;
+  height: 36px;
+  margin-top: 0;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  background: #ff6600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #fff;
+}
+.header_logonav .navbox {
+  float: left;
+  width: 100%;
+  height: 18px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+.header_logonav .navbox a {
+  float: left;
+  margin-right: 10px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #666;
+}
+.header_logonav .navbox a:hover {
+  color: #f60;
+}
+.header_logonav .phonepics {
+  float: right;
+  margin-top: 17px;
+  position: relative;
+}
+.header_logonav .phonepics .imgleft {
+  margin-right: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.header_logonav .phonepics b {
+  width: 1px;
+  height: 34px;
+  background: #ddd;
+  right: 85px;
+  top: 3px;
+  display: inline-block;
+  position: absolute;
+  font-weight: 700px;
+}
+
+.nav_bar {
+  position: relative;
+}
+
+.all {
+  width: 210px;
+  height: 40px;
+  background: #ff6600;
+  float: left;
+}
+.all ul {
+  z-index: 99999;
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.9);
+  width: 210px;
+  height: 450px;
+  top: 40px;
+  left: 0px;
+}
+.all ul li {
+  padding: 11px 0 9px 15px;
+  zoom: 1;
+  cursor: default;
+  border-bottom: 1px solid #555;
+}
+
+.allbtn {
+  z-index: 99999;
+  position: relative;
+}
+
+h2 a {
+  box-sizing: border-box;
+  line-height: 40px;
+  background-color: #ff6600;
+  padding-left: 15px;
+  width: 210px;
+  display: block;
+  height: 40px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+}
+h2 a:hover {
+  color: #fff;
+}
+
+.topli a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.botli {
+  padding-top: 1px;
+  line-height: 22px;
+}
+.botli a {
+  color: #999;
+  font-size: 12px;
+}
+
+.nav_index {
+  position: absolute;
+  left: 210px;
+  height: 40px;
+}
+.nav_index li {
+  margin-left: 50px;
+  float: left;
+}
+.nav_index li a {
+  position: relative;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+.nav_index li a:hover {
+  color: #ff5600;
+}
+
+.nav_right {
+  float: right;
+}
+
+.footer {
+  position: relative;
+}
+
+.f_ribbon {
+  background-color: #ff6600;
+}
+.f_ribbon .col-md-5 {
+  float: left;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 20%;
+}
+.f_ribbon a {
+  display: inline-block;
+  text-align: center;
+  height: 65px;
+  width: 100%;
+  line-height: 65px;
+  color: #fff !important;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.f_main {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.main {
+  width: 940px;
+  float: left;
+}
+
+.col-md-2 {
+  padding-right: 5px;
+  padding-left: 5px;
+  float: left;
+  width: 16.6%;
+}
+.col-md-2 dt {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.col-md-2 dd {
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.tel {
+  position: relative;
+  float: right;
+  width: 250px;
+}
+
+.telright {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  text-align: right;
+  color: #666;
+}
+.telright .f-18 {
+  font-size: 18px !important;
+}
+.telright .f-30 {
+  font-size: 30px !important;
+  color: #ff6600;
+}
+.telright .online {
+  margin-top: 5px;
+}
+.telright .online a {
+  color: #ff6600;
+  border: 1px solid #ff6600;
+  border-radius: 5px;
+  padding: 7px 35px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.telright .online a:hover {
+  color: #fff;
+  background: #ff6600;
+}
+
+.f_info {
+  background: #333;
+  color: #a4a4a4;
+  padding: 20px 0;
+}
+.f_info .f-16 {
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+}
+
+.lh-22 {
+  line-height: 22px;
+  color: #a4a4a4;
+}
+.lh-22 a {
+  color: #a4a4a4;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.info_logo {
+  margin-right: 10px;
+}
+
+.info-link {
+  margin-top: 20px;
+  height: 16px;
+  color: #999;
+  overflow: hidden;
+}
+.info-link a {
+  color: #a4a4a4;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+b, strong {
+  font-weight: 700px;
+}
+
+.container {
+  width: 1210px;
+  margin: 0 auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color .2s;
+}
+a:hover {
+  color: #ff6600;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+}
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft YaHei;
+  font-weight: normal;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #333;
+}
+
+.banner_lunbo {
+  height: 450px;
+  width: 100%;
+  position: relative;
+}
+
+.lunbo_img {
+  position: relative;
+}
+.lunbo_img li {
+  background: #df004d;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: list-item;
+  opacity: 1;
+  width: 100% !important;
+  height: 450px;
+}
+.lunbo_img .img {
+  width: 770px;
+  margin-left: 210px;
+  position: relative;
+}
+
+.tab_quickbtn {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: 380px;
+  width: 220px;
+  height: 450px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+}
+
+.banner_tab {
+  text-align: left;
+  overflow: hidden;
+  height: 208px;
+}
+.banner_tab .tab_title {
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px 0 10px;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+.banner_tab .tab_title ul {
+  float: left;
+  position: absolute;
+  left: 10px;
+  height: 38px;
+}
+.banner_tab .tab_title li {
+  float: left;
+  margin: 0 10px;
+  padding: 0 1px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.banner_tab .tab_title .on {
+  height: 38px;
+  color: #ff6600;
+  border-bottom: 3px solid #ff6600;
+}
+.banner_tab .tab_content ul {
+  padding: 10px 15px;
+}
+.banner_tab .tab_content li {
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.quickbtn {
+  border-width: 1px 0px 0px 0;
+  border-color: #e8e8e8;
+  border-style: solid;
+  width: 222px;
+  overflow: hidden;
+}
+.quickbtn li {
+  float: left;
+  width: 74px;
+  height: 80px;
+  border-width: 0px 1px 1px 0px;
+  border-color: #e8e8e8;
+  border-style: solid;
+  text-align: center;
+}
+.quickbtn li:nth-child(3n) {
+  border-width: 0px 0 1px 0px;
+}
+.quickbtn a {
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  padding-top: 8px;
+  height: 80px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.quickbtn .icon {
+  font-size: 2pc;
+  line-height: 43px;
+  transition: font-size .25s ease-out 0s;
+}
+
+/*# sourceMappingURL=index.css.map */

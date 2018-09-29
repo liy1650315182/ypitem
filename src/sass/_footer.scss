@@ -1,0 +1,120 @@
+@charset "utf-8";
+.footer {
+    position: relative;
+}
+//功能区
+.f_ribbon {
+    background-color: #ff6600;
+    .col-md-5{
+        float: left;
+        padding-right: 5px;
+        padding-left: 5px;
+        width: 20%;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        height: 65px;
+        width: 100%;
+        line-height: 65px;
+        color: #fff!important;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+//内容区
+.f_main {
+    width: 100%;
+    padding:40px 0;
+}
+//内容区的主要部分
+.main {
+    width: 940px;
+    float: left;
+}
+.col-md-2{
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+    width: 16.6%;
+    dt{
+        color: #333;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    dd{
+        line-height: 24px;
+        font-size: 12px;
+    }
+}
+//联系客服
+.tel{
+    position: relative;
+    float: right;
+    width: 250px;
+}
+.telright{
+    position: absolute;
+    right: 0;
+    top: 55px;
+    text-align: right;
+    color: #666;
+    .f-18{
+        font-size: 18px!important;
+    }
+    .f-30{
+        font-size: 30px!important;
+        color: #ff6600;
+    }
+    .online{
+        margin-top: 5px;
+        a{
+            color: #ff6600;
+            border: 1px solid #ff6600;
+            border-radius: 5px;
+            padding: 7px 35px;
+            display: inline-block;
+            margin-top: 5px;
+            &:hover{
+                color: #fff;
+                background:  #ff6600;
+            }
+        }
+    }
+}
+//底部
+.f_info {
+    background: #333;
+    color: #a4a4a4;
+    padding: 20px 0;
+    .f-16{
+        font-size: 16px;
+        color: #fff;
+        line-height: 24px;
+    }
+}
+.lh-22{
+    line-height: 22px;
+    color: #a4a4a4;
+    a{
+        color: #a4a4a4;
+    }
+}
+.mt-10{
+    margin-top: 10px;
+}
+.info_logo{
+    margin-right: 10px;
+}
+.info-link{
+    margin-top: 20px;
+    height: 16px;
+    color: #999;
+    overflow: hidden;
+    a{
+        color: #a4a4a4;
+        margin-right: 5px;
+        display: inline-block;
+    }
+}

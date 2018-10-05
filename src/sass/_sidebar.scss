@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+//侧边栏
+.sidebar {
+    width: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 100%;
+    background: #333;
+}
+
+//a和i的共有部分
+.side_link,
+.top {
+    a {
+        display: block;
+        width: 30px;
+        height: 38px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    i {
+        display: inline-block;
+        background: url(https://static.ingping.com/yp/images/ibar_sprites-1.0.1.png) no-repeat;
+        cursor: pointer;
+        vertical-align: top;
+        position: absolute;
+    }
+}
+
+.side_link {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -190px;
+    z-index: 200;
+    width: 30px;
+    height: 315px;
+
+    .my_link {
+        width: 18px;
+        height: 19px;
+        background-position: 0 0;
+        top: 10px;
+        left: 6px;
+    }
+
+    .tel_link {
+        width: 20px;
+        height: 20px;
+        top: 11px;
+        left: 6px;
+        background-position: 0 -175px;
+    }
+
+    .cart_link {
+        background-position: 0px -29px;
+        width: 23px;
+        height: 18px;
+        top: 11px;
+        left: 6px;
+    }
+
+    .money_link {
+        width: 18px;
+        height: 18px;
+        background-position: 0 -57px;
+        top: 10px;
+        left: 6px;
+    }
+
+    img {
+        width: 20px;
+        margin: 0 auto;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+    }
+}
+
+#shopcart a {
+    line-height: 16px;
+    height: 133px;
+    margin: 20px 0 10px;
+}
+
+.cart_link {
+    background-position: 0px -29px;
+    width: 23px;
+    height: 18px;
+    top: 11px;
+    left: 6px;
+}
+
+.cart {
+    display: inline-block;
+    width: 16px;
+    height: 48px;
+    margin: 38px 0 0 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.amount {
+    width: 21px;
+    height: 21px;
+    display: block;
+    border-radius: 50%;
+    background: #ff6600;
+    text-align: center;
+    line-height: 21px;
+    margin: 9px 0 0 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+//回到顶部
+.top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    z-index: 1;
+
+    .topli {
+        width: 18px;
+        height: 18px;
+        top: 11px;
+        left: 6px;
+        background-position: 0 -302px;
+    }
+
+    .topback {
+        background-position: 0 -201px;
+        width: 17px;
+        height: 14px;
+        top: 12px;
+        left: 7px;
+    }
+}

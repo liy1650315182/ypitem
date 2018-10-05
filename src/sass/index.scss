@@ -1,10 +1,14 @@
 @charset "utf-8";
 @import "header";
 @import "footer";
+@import "sidebar";
+
 //重置样式
-b,strong{
+b,
+strong {
     font-weight: 700px;
 }
+
 .container {
     width: 1210px;
     margin: 0 auto;
@@ -14,26 +18,62 @@ b,strong{
     margin-left: auto;
     box-sizing: border-box;
 }
-.clearfix::after{
-    content: " ";clear: both; display: block;height: 0;overflow: hidden;visibility: hidden;
+
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
-a{
+
+a {
     text-decoration: none;
     color: #333;
-    transition: color .2s;
-    &:hover{
-        color:#ff6600;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #ff6600;
     }
 }
-li{
+
+li {
     list-style: none;
 }
-img{
+
+img {
     display: inline-block;
     vertical-align: middle;
     border: 0;
 }
-html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p{
+
+i {
+    font-style: normal;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+p {
     margin: 0;
     padding: 0;
     font-family: Microsoft YaHei;
@@ -42,15 +82,19 @@ html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fields
     font-size: 12px;
     color: #333;
 }
-//banner_lunbo
-.banner_lunbo{
+
+
+//banner_lunbo/tab/quickbtn轮播图、tab切换、快速查找
+.banner_lunbo {
     height: 450px;
     width: 100%;
     position: relative;
 }
-.lunbo_img{
+
+.lunbo_img {
     position: relative;
-    li{
+
+    li {
         background: rgb(223, 0, 77);
         position: absolute;
         left: 0px;
@@ -59,15 +103,17 @@ html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fields
         opacity: 1;
         width: 100% !important;
         height: 450px;
-    } 
-    .img{
+    }
+
+    .img {
         width: 770px;
         margin-left: 210px;
         position: relative;
     }
 }
+
 //tab切换和快速查找
-.tab_quickbtn{
+.tab_quickbtn {
     position: absolute;
     left: 50%;
     top: 0;
@@ -78,40 +124,47 @@ html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fields
     border-bottom: 1px solid #e8e8e8;
     background-color: #fff;
 }
-.banner_tab{
+
+.banner_tab {
     text-align: left;
     overflow: hidden;
     height: 208px;
-    .tab_title{
+
+    .tab_title {
         height: 38px;
         line-height: 38px;
         padding: 0 10px 0 10px;
         border-bottom: 1px solid #e8e8e8;
         position: relative;
-        ul{
+
+        ul {
             float: left;
             position: absolute;
             left: 10px;
             height: 38px;
         }
-        li{
+
+        li {
             float: left;
             margin: 0 10px;
             padding: 0 1px;
             cursor: pointer;
             font-size: 13px;
         }
-        .on{
+
+        .on {
             height: 38px;
             color: #ff6600;
             border-bottom: 3px solid #ff6600;
         }
     }
-    .tab_content{
-        ul{
+
+    .tab_content {
+        ul {
             padding: 10px 15px;
         }
-        li{
+
+        li {
             height: 25px;
             font-size: 12px;
             line-height: 25px;
@@ -119,26 +172,31 @@ html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fields
         }
     }
 }
+
 //快速查找
-.quickbtn{
+.quickbtn {
     border-width: 1px 0px 0px 0;
     border-color: #e8e8e8;
     border-style: solid;
-    width: 222px;
+    width: 220px;
     overflow: hidden;
-    li{
+
+    li {
         float: left;
-        width: 74px;
+        width: 73px;
         height: 80px;
         border-width: 0px 1px 1px 0px;
         border-color: #e8e8e8;
         border-style: solid;
         text-align: center;
     }
+
     li:nth-child(3n) {
         border-width: 0px 0 1px 0px;
+        width: 74px;
     }
-    a{
+
+    a {
         cursor: pointer;
         text-align: center;
         display: block;
@@ -147,10 +205,393 @@ html,body,div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fields
         font-size: 12px;
         box-sizing: border-box;
     }
-    .icon{
+
+    .icons {
         font-size: 2pc;
         line-height: 43px;
-        transition: font-size .25s ease-out 0s;
+        transition: font-size 0.25s ease-out 0s;
     }
 }
 
+//主要内容模块
+//设备推荐 猜你喜欢 最新晒单 音平资讯的共有部分
+.equipment,
+.guess-main,
+.new-main,
+.ypnews-main {
+    margin-right: -5px;
+    margin-left: -5px;
+    margin-top: 15px;
+}
+
+.eq-imgs,
+.guess-imgs,
+.new-imgs,
+.ypnews-imgs {
+    overflow: hidden;
+    float: left;
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+//猜你喜欢
+.text {
+    overflow: hidden;
+    margin: 30px 0px 10px 0;
+    height: 33px;
+    line-height: 33px;
+    position: relative;
+
+    h2 {
+        font-size: 26px;
+
+        i {
+            font-size: 26px;
+            color: #ff6600;
+        }
+    }
+}
+
+.more {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    i{
+        margin: 0 5px;
+        color: #ccc;
+    }
+}
+
+.guess-main {
+    margin-top: 0;
+}
+
+.guess-goods {
+    background: #fff;
+    height: 270px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 14px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+
+    a {
+        display: block;
+
+        img {
+            margin: 15px 0;
+        }
+
+        .goods-name {
+            overflow: hidden;
+            text-align: left;
+            height: 38px;
+            font-size: 14px;
+            line-height: 20px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+    }
+}
+
+//价格的共有样式
+.goods-price {
+    padding: 3px 0;
+    height: 25px;
+    margin-top: 5px;
+    text-align: left;
+    font-family: arial;
+
+    span {
+        color: #ff6600;
+        font-weight: 700;
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+    i {
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 3px;
+    }
+}
+
+//热卖促销
+.hot-sales {
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+//热卖促销 1F 2F 3F 4F 5F 6F
+//热卖促销的左部
+.all-left {
+    float: left;
+    width: 400px;
+    margin-right: 10px;
+
+    a {
+        overflow: hidden;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+//热卖促销的中部
+.all-mid {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+
+    .mid-top {
+        width: 570px;
+        margin-bottom: 10px;
+
+        .top-imgs {
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+            width: 190px;
+        }
+    }
+
+    .mid-top-l {
+        width: 280px;
+    }
+
+    .mid-left {
+        width: 350px;
+        float: left;
+
+        .left-imgs {
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            width: 160px;
+        }
+    }
+
+    .mid-right {
+        width: 210px;
+        float: right;
+    }
+}
+
+//热卖促销的右部
+.all-right {
+    float: left;
+    width: 200px;
+
+    .right-2 {
+        width: 210px;
+    }
+}
+//热卖促销中部和右部a的共有样式
+.all-mid,
+.all-right {
+    a {
+        height: 195px;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+    }
+}
+//促销的共有样式
+.cu {
+    width: 28px;
+    height: 31.11px;
+    background: url(https://static.ingping.com/yp/images/cu-1.0.1.png) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-size: 14px;
+}
+
+//促销左边文字的共有样式
+.mid-left-l {
+    width: 180px;
+}
+.all_left_div {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    .c-999 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #999;
+    }
+
+    .f-18 {
+        font-size: 18px;
+    }
+}
+
+//小图的共有样式
+.right-imgs {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 130px;
+}
+
+//1F 2F 3F 4F 5F 6F
+.icon{
+    background: url(https://static.ingping.com/yp/images/result-1.0.0.png);
+    width: 32px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+//1F 录音编曲
+.icon1{
+    background-position: 0px 0px;
+}
+.same{
+    .all-left{
+        float: left;
+    }
+    .all-mid{
+        float: right;
+        width: 790px;
+        margin-right: 0px;
+    }
+    .fl{
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+.brands{
+    height: 70px;
+    background: #fff;
+    border-bottom: 2px solid #ff6600;
+    li{
+        width: 120px;
+        height: 70px;
+        padding: 15px 0px;
+        text-align: center;
+        float: left;
+        a{
+            display: block;
+        }
+        img{
+            height: 40px;
+        }
+    }
+}
+
+//2F 网络主播
+.icon2{
+    background-position: 0px -26px;
+}
+//3F 家庭KTV
+.icon3{
+    background-position: 0px -52px;
+}
+//4F 吉他乐器
+.icon4{
+    background-position: 0px -78px;
+}
+//5F 影视录音
+.icon5{
+    background-position: 0px -104px;
+}
+//6F 其他应用
+.icon6{
+    background-position: 0px -130px;
+}
+
+//最新晒单
+.new-imgs,
+.ypnews-imgs {
+    background: #fff;
+    margin: 0 3px;
+}
+
+.pro-img {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        margin: 0 auto;
+        height: 174px;
+    }
+}
+
+.new-title {
+    height: 34px;
+    margin: 15px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.share-pro {
+    background: #f2f2f2;
+    height: 62px;
+    display: block;
+    padding: 2px;
+    margin: 15px;
+
+    img {
+        width: 62px;
+        height: 62px;
+        float: left;
+        margin: 0;
+    }
+}
+
+.pro-title {
+    padding: 13px 10px 19px 10px;
+    margin-left: 62px;
+
+    .title {
+        font-size: 12px;
+        line-height: 18px;
+        overflow: hidden;
+        height: 36px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: -1px;
+    }
+}
+
+.line {
+    border-top: 1px solid #ddd;
+}
+
+dl {
+    padding: 10px;
+
+    dt {
+        width: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+        float: left;
+        color: #999;
+
+    }
+
+    dd {
+        float: right !important;
+        color: #999;
+
+    }
+}
+
+.yp-title {
+    height: 40px;
+    margin: 15px;
+    overflow: hidden;
+    font-size: 14px;
+}

@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/registor.css">
 </head>
+
 <body>
-    abc
+    <div id="login-index">
+        <div class="login-reg-h"></div>
+        <div class="reg-content">
+            <div class="container clearfix">
+                <h1 class="title">
+                    <span>一个账号，玩转所有音平服务</span>
+                </h1>
+                <div class="regbox">
+                    <p class="reg-title">注册账号</p>
+                    <div class="reg-main">
+                        <div class="enter" style="width: 220px;">
+                            <input type="text" class="enter-items" id="phoneNum" name="phoneNum" autocomplete="off"
+                                placeholder="请输入手机号" style="width: 200px">
+                        </div>
+                        <span class="remain">
+                            <a href="#">获取验证码</a>
+                        </span>
+                        <div class="enter">
+                            <input type="text" class="enter-items" autocomplete="off" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="enter">
+                            <input type="text" class="enter-items" autocomplete="off" placeholder="请设置6-20位登录密码">
+                        </div>
+                        <div class="reg-f">
+                            <input type="checkbox" name="" id="checkbox" class="checkbox">
+                            <label for="checkbox">我已阅读并同意</label>
+                            <a href="#">《音平网服务协议》</a>
+                        </div>
+                        <input type="button" value="立即注册" id="submit" class="denglu">
+                        <input type="button" value="已有账号，去登录" id="submit" class="zhuce">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-reg-f"></div>
+    </div>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/index.js"></script>
 </body>
+
 </html>

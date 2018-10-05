@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//登录的头部
+.login-header {
+    height: 100px;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.login-logo {
+    float: left;
+}
+
+.header-text {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 12px;
+    border: 1px solid;
+    border-color: #ffb4a8;
+    background: #fef2f2;
+    line-height: 16px;
+    padding: 6px 10px;
+    overflow: hidden;
+
+    p {
+        width: auto;
+        color: #6C6C6C;
+    }
+}
+
+.login-items {
+    margin-top: 17px;
+    margin-right: 47px;
+    float: right;
+
+    li {
+        float: left;
+        width: 125px;
+    }
+}

@@ -1,14 +1,14 @@
 @charset "utf-8";
 //header的顶部图片
 .header_img {
-    background: #fc7a00;
+    background: #df004d;
 
     .pic {
         display: block;
         width: 1210px;
         height: 100px;
         margin: 0 auto;
-        background: url(http://10.31.162.37/js/ingping/src/images/top_img1.jpg) no-repeat;
+        background: url(https://img.ingping.com/images/ad_images/201809/201809271754200539771.jpg) no-repeat;
     }
 }
 
@@ -24,6 +24,7 @@
 //header中部的左部导航
 .tnleft {
     float: left;
+    padding: 0;
 
     h5 {
         font-size: 12px;
@@ -46,7 +47,7 @@
 //header中部的右部导航
 .tnright {
     float: right;
-
+    padding: 0;
     dd {
         float: left;
         position: relative;

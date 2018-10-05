@@ -1,0 +1,250 @@
+@charset "utf-8";
+@import "loginregh";
+@import "loginregf";
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+i {
+    font-style: normal;
+}
+
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+    font-size: 12px;
+    color: #333;
+}
+
+#login-index {
+    height: 880px;
+    position: relative;
+    overflow: hidden;
+}
+//登陆的主要内容部分
+//背景
+.login-content {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 580px;
+}
+
+.content-bg {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    a {
+        background-image: url(https://img.ingping.com/images/ad_images/201705/201705031858210830908.jpg);
+        height: 100%;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+}
+
+//登录
+.login {
+    width: 35%;
+    float: right;
+    margin-right: 3%;
+    height: 100%;
+    position: relative;
+}
+
+//密码登录
+.login-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    margin-top: 12%;
+}
+
+//login
+.login-main {
+    text-align: left;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 75%;
+    top: 50px;
+}
+
+.main {
+    display: block !important;
+    width: 80%;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.main-title {
+    height: 45px;
+    font-size: 18px;
+    line-height: 45px;
+    color: #666666;
+}
+
+.user,
+.pass {
+    position: relative;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #e6e6e6 !important;
+    position: relative;
+
+}
+
+.text,
+.password {
+    line-height: 20px;
+    width: 92%;
+    padding: 12px 10px;
+    border: 0;
+    outline: 0;
+}
+
+.placeholder {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #c2c2c2;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+//忘记密码
+.forget {
+    height: 18px;
+    margin-top: 16px;
+    text-align: right;
+
+    a {
+        display: inline-block;
+        color: #999;
+        padding-right: 6px;
+        &:hover {
+            color: #ff6600;
+        }
+    }
+}
+
+#submit {
+    margin-top: 16px;
+    display: block;
+    font-size: 16px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.denglu{
+    background: #E91206 !important;
+    color: #fff !important;
+    border: 1px solid #E91206 !important;
+}
+.zhuce{
+    background: #fff!important;
+    border: 1px solid #e5e5e5!important;
+    color: #7c7c7c!important;
+}
+
+.login-foot {
+    height: 18px;
+    margin-top: 16px;
+}
+
+.f-main {
+    position: relative;
+    float: right;
+    dl{
+        width: 237px;
+    }
+    dt {
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        font-size: 13px;
+        color: #999;
+    }
+
+
+    a {
+        float: left;
+        height: 24px;
+        line-height: 16px;
+        width: 30px;
+        background: url(https://passport.ingping.com/images/s_gallery_20141218.png) left top no-repeat;
+    }
+
+    .weixin {
+        background-position: 0 0px;
+    }
+
+    .zfb {
+        background-position: 0 -58px;
+    }
+
+    .qq {
+        background-position: 0 -87px;
+    }
+
+    .weibo {
+        background-position: 0 -116px;
+    }
+}

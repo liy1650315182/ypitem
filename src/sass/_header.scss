@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 //header的顶部图片
 .header_img {
     background: #df004d;
@@ -48,21 +49,30 @@
 .tnright {
     float: right;
     padding: 0;
+
     dd {
         float: left;
         position: relative;
     }
-    h3{
-        float: left;
-    }
-    a{
+}
+
+.tnright_h3 {
+    float: left;
+
+    a {
         line-height: 37px;
         border: 1px solid #fcfcfc;
         font-size: 12px;
         padding: 9px 20px 8px;
         box-sizing: border-box;
+
+        &:hover {
+            border: 1px solid #eaeaea;
+            border-bottom: none;
+        }
     }
-    em{
+
+    em {
         display: inline-block;
         width: 10px;
         height: 5px;
@@ -75,6 +85,170 @@
     }
 }
 
+//二级导航
+//我的音平二级导航
+.my-yp,
+.serve {
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
+}
+
+.my-yp {
+    ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 35px;
+        right: 0;
+        z-index: 8;
+        border: 1px solid #eaeaea;
+        border-top: 0;
+        background: #fff;
+    }
+
+    li {
+        line-height: 35px;
+        border-top: 1px solid #eaeaea;
+
+        a {
+            padding: 0 15px;
+        }
+    }
+}
+
+//客服服务二级导航
+.serve {
+    &:hover{
+        ul{
+            display: block;
+        }
+    }
+    .serve_tel {
+        display: none;
+        width: 245px;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        z-index: 8;
+        border: 1px solid #eaeaea;
+        background: #fff;
+    }
+
+    li {
+        width: 90%;
+        margin: 0 auto;
+    }
+//导航1
+    .ontime {
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 5px;
+        position: relative;
+        height: 135px;
+
+        img {
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            margin-top: -5px;
+        }
+    }
+
+    .ontime_text {
+        position: absolute;
+        top: 60px;
+        right: 23px;
+        text-align: right;
+
+        p {
+            padding: 5px 0;
+        }
+
+        a {
+            float: right;
+            display: block;
+            color: #fff;
+            border: 1px solid #ff6600;
+            border-radius: 20px;
+            width: 80px;
+            height: 27px;
+            line-height: 26px;
+            font-size: 14px;
+            text-align: center;
+            background: #ff6600;
+        }
+    }
+
+    .text-666 {
+        line-height: 18px;
+        color: #666;
+    }
+//导航2
+    .serve_time {
+        padding: 25px 0;
+        height: 90px;
+        .icon-tel{
+            float: left;
+            display: block;
+            width: 60px;
+            height: 60px;
+        }
+        i{
+            font-size: 42px;
+            color: #777;
+            top: 2px;
+            left: 10px;
+            position: relative;
+        }
+        .text-p{
+            float: left;
+            height: 41px;
+        }
+        .span1{
+            line-height: 18px;
+            display: block;
+            font-weight: 700;
+            font-size: 20px;
+            color: #ff6600;
+            margin-bottom: -5px;
+        }
+        .span2{
+            line-height: 18px;
+            color: #666;
+        }
+
+    }
+//导航3
+    .wechat {
+        padding: 15px 0;
+        border-top: 1px solid #e9e9e8;
+        padding-left: 15px;
+        span{
+            float: left;
+        }
+    }
+    .wechat-1{
+        width: 60px;
+        margin-top: 20px;
+    }
+    .wechat-2{
+        margin-top: 22px;
+        color: #959595;
+        i{
+            display: block;
+            line-height: 16px;
+        }
+    }
+    .wechat-3{
+        margin-left: 10px;
+    }
+}
+
+
+
 //header的主要内容
 .header_logonav {
     position: relative;
@@ -82,6 +256,7 @@
     width: 100%;
     padding-top: 20px;
     margin-bottom: 20px;
+
     #logo {
         width: 220px;
         float: left;
@@ -92,7 +267,8 @@
         text-align: center;
         float: left;
     }
-//搜索框
+
+    //搜索框
     .search {
         width: 560px;
         float: left;
@@ -137,7 +313,8 @@
         font-size: 16px;
         color: #fff;
     }
-//搜索框的导航
+
+    //搜索框的导航
     .navbox {
         float: left;
         width: 100%;
@@ -157,7 +334,8 @@
             }
         }
     }
-//header的right部分
+
+    //header的right部分
     .phonepics {
         float: right;
         margin-top: 17px;
@@ -181,16 +359,21 @@
         }
     }
 }
+
 //header的总导航部分
 .nav_bar {
     position: relative;
 }
+
 //全部商品分类
-.all {
+.allbtn {
     width: 210px;
     height: 40px;
     background: #ff6600;
-    float: left; 
+    float: left;
+    z-index: 99999;
+    position: relative;
+
     ul {
         z-index: 99999;
         position: absolute;
@@ -199,6 +382,7 @@
         height: 450px;
         top: 40px;
         left: 0px;
+
         li {
             padding: 11px 0 9px 15px;
             zoom: 1;
@@ -206,10 +390,6 @@
             border-bottom: 1px solid #555;
         }
     }
-}
-.allbtn {
-    z-index: 99999;
-    position: relative;
 }
 
 h2 a {
@@ -223,32 +403,38 @@ h2 a {
     color: #ffffff;
     font-size: 14px;
     font-weight: normal;
-    &:hover{
+
+    &:hover {
         color: #fff;
     }
 }
+
 .topli a {
     color: #fff;
     font-size: 14px;
 }
 
-.botli{
+.botli {
     padding-top: 1px;
     line-height: 22px;
+
     a {
         color: #999;
         font-size: 12px;
     }
-} 
+}
+
 //总导航
 .nav_index {
     position: absolute;
     left: 210px;
     height: 40px;
-    li{
+
+    li {
         margin-left: 50px;
         float: left;
-        a{
+
+        .li7 {
             position: relative;
             display: block;
             height: 40px;
@@ -256,13 +442,55 @@ h2 a {
             font-size: 14px;
             font-weight: 700;
             color: #333;
-            &:hover{
-                color:#ff5600;;
+
+            &:hover {
+                color: #ff5600;
             }
         }
     }
 }
+.sub_nav{
+    &:hover{
+        .sub_nav_main{
+            display: block;
+        }
+    }
+}
+.sub_nav_main{
+    display: none;
+    z-index: 12000;
+    border: 1px solid #ff6600;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 522px;
+    background: #fff;
+    padding-bottom: 5px;
+    &::before{
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: -10px;
+        left: 125px;
+        width: 15px;
+        height: 12px;
+        background: url(https://static.ingping.com/yp/images/index_arrow-1.0.0.png) no-repeat center center;
+    }
+    li{
+        width: 100px;
+        text-align: center;
+        border-right: 1px solid #d1d1d1;
+        float: left;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    a{
+        font-size: 13px;
+    }
+}
+
 //导航右边的小轮播图
-.nav_right{
+.nav_right {
     float: right;
 }

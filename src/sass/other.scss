@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+
+/* iconfont */
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont-1.0.3.eot#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/iconfont-1.0.3.woff') format('woff'),
+        /* chrome, firefox */
+        url('../fonts/iconfont-1.0.3.ttf') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url('../fonts/iconfont-1.0.3.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* iconfont_index */
+@font-face {
+    font-family: "iconfont_index";
+    src: url('../fonts/iconfont_index-1.0.0.eot#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/iconfont_index-1.0.0.woff') format('woff'),
+        /* chrome, firefox */
+        url('../fonts/iconfont_index-1.0.0.ttf') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url('../fonts/iconfont_index-1.0.0.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont_index {
+    font-family: "iconfont_index" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*listfont*/
+@font-face {
+    font-family: 'listfont';
+    src: url('../fonts/iconfont-list-1.0.0.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont-list-1.0.0.woff') format('woff'),
+        url('../fonts/iconfont-list-1.0.0.ttf') format('truetype'),
+        url('../fonts/iconfont-list-1.0.0.svg#iconfont') format('svg');
+}
+
+.listfont {
+    font-family: "listfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+
+//重置样式
+b,
+strong {
+    font-weight: 700px;
+}
+
+.container {
+    width: 1210px;
+    margin: 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #ff6600;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+}
+
+i,em{
+    font-style: normal;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+    font-weight: normal;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #333;
+}
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ZH-cn">
+	
 
 <head>
 	<meta charset="UTF-8">
@@ -9,72 +10,13 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/other.css">
-	<style>
-		/* iconfont */
-		@font-face {
-			font-family: "iconfont";
-			src: url('fonts/iconfont-1.0.3.eot#iefix') format('embedded-opentype'),
-				/* IE6-IE8 */
-				url('fonts/iconfont-1.0.3.woff') format('woff'),
-				/* chrome, firefox */
-				url('fonts/iconfont-1.0.3.ttf') format('truetype'),
-				/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-				url('fonts/iconfont-1.0.3.svg#iconfont') format('svg');
-			/* iOS 4.1- */
-		}
-
-		.iconfont {
-			font-family: "iconfont" !important;
-			font-size: 14px;
-			font-style: normal;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		/* iconfont_index */
-		@font-face {
-			font-family: "iconfont_index";
-			src: url('fonts/iconfont_index-1.0.0.eot#iefix') format('embedded-opentype'),
-				/* IE6-IE8 */
-				url('fonts/iconfont_index-1.0.0.woff') format('woff'),
-				/* chrome, firefox */
-				url('fonts/iconfont_index-1.0.0.ttf') format('truetype'),
-				/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-				url('fonts/iconfont_index-1.0.0.svg#iconfont') format('svg');
-			/* iOS 4.1- */
-		}
-
-		.iconfont_index {
-			font-family: "iconfont_index" !important;
-			font-size: 14px;
-			font-style: normal;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		/*listfont*/
-		@font-face {
-			font-family: 'listfont';
-			src: url('fonts/iconfont-list-1.0.0.eot?#iefix') format('embedded-opentype'),
-				url('fonts/iconfont-list-1.0.0.woff') format('woff'),
-				url('fonts/iconfont-list-1.0.0.ttf') format('truetype'),
-				url('fonts/iconfont-list-1.0.0.svg#iconfont') format('svg');
-		}
-
-		.listfont {
-			font-family: "listfont" !important;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			font-style: normal;
-		}
-	</style>
-
+	
 </head>
 
 <body>
 	<!-- 导入头部 -->
-	<div class="topcontent"></div>
-
+	<div id="top" class="topcontent"></div>
+	<!-- 侧边栏 -->
 	<div class="aside"></div>
 
 	<!-- banner -->
@@ -362,7 +304,7 @@
 			</div>
 
 			<!-- 1F 录音编曲 -->
-			<div class="record same">
+			<div id="floor1" class="record same">
 				<div class="text">
 					<h2>
 						<i class="icon1 icon"></i>
@@ -493,7 +435,7 @@
 			</div>
 
 			<!-- 2F 网络主播 -->
-			<div class="network same">
+			<div id="floor2" class="network same">
 				<div class="text">
 					<h2>
 						<i class="icon2 icon"></i>
@@ -612,7 +554,7 @@
 			</div>
 
 			<!-- 3F 家庭KTV -->
-			<div class="family same">
+			<div id="floor3" class="family same">
 				<div class="text">
 					<h2>
 						<i class="icon3 icon"></i>
@@ -731,7 +673,7 @@
 			</div>
 
 			<!-- 4F 吉他乐器 -->
-			<div class="musical same">
+			<div id="floor4" class="musical same">
 				<div class="text">
 					<h2>
 						<i class="icon4 icon"></i>
@@ -850,7 +792,7 @@
 			</div>
 
 			<!-- 5F 影视录音 -->
-			<div class="video same">
+			<div id="floor5" class="video same">
 				<div class="text">
 					<h2>
 						<i class="icon5 icon"></i>
@@ -961,7 +903,7 @@
 			</div>
 
 			<!-- 6F 其他应用 -->
-			<div class="other same">
+			<div id="floor6" class="other same">
 				<div class="text">
 					<h2>
 						<i class="icon6 icon"></i>
@@ -1105,9 +1047,9 @@
 								</div>
 							</a>
 							<div class="line"></div>
-							<dl class="clearfix">
+							<dl class="clearfix name-date">
 								<dt>AEC***HIC</dt>
-								<dd>2018-10-04</dd>
+								<dd class="date">2018-10-04</dd>
 							</dl>
 						</div>
 					</li>
@@ -1128,9 +1070,9 @@
 								</div>
 							</a>
 							<div class="line"></div>
-							<dl class="clearfix">
+							<dl class="clearfix name-date">
 								<dt>AEC***HIC</dt>
-								<dd>2018-10-04</dd>
+								<dd class="date">2018-10-04</dd>
 							</dl>
 						</div>
 					</li>
@@ -1138,7 +1080,7 @@
 			</div>
 
 			<!-- 音平资讯 -->
-			<div class="ypnews" style="padding-bottom: 20px;">
+			<div id="floor7" class="ypnews" style="padding-bottom: 20px;">
 				<div class="text">
 					<h2>
 						<i class="iconfont"></i>
@@ -1156,9 +1098,9 @@
 							</p>
 						</a>
 						<div class="line"></div>
-						<dl class="clearfix">
+						<dl class="clearfix name-date">
 							<dt>AEC***HIC</dt>
-							<dd>2018-10-04</dd>
+							<dd class="date">2018-10-04</dd>
 						</dl>
 					</li>
 					<li class="ypnews-imgs">
@@ -1171,15 +1113,26 @@
 							</p>
 						</a>
 						<div class="line"></div>
-						<dl class="clearfix">
+						<dl class="clearfix name-date">
 							<dt>AEC***HIC</dt>
-							<dd>2018-10-04</dd>
+							<dd class="date">2018-10-04</dd>
 						</dl>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<ul class="louti" id="nav_panel">
+		<p class="current">导航</p>
+		<li><a href="#floor1">录音编曲</a></li>
+		<li><a href="#floor2">网络主播</a></li>
+		<li><a href="#floor3">家庭KTV</a></li>
+		<li><a href="#floor4">吉他乐器</a></li>
+		<li><a href="#floor5">影视录音</a></li>
+		<li><a href="#floor6">其他应用</a></li>
+		<li><a href="#floor7">最新晒单</a></li>
+		<p><a class="toTop" href="#top" style="background: #8a8a8a"><i class="iconfont"></i><br>顶部</a></p>
+	</ul>
 
 
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header_img {
   background: #df004d;
 }
@@ -215,32 +214,37 @@
   padding-top: 20px;
   margin-bottom: 20px;
 }
-.header_logonav #logo {
+
+#logo {
   width: 220px;
   float: left;
 }
-.header_logonav .logo_ad {
+
+.logo_ad {
   width: 190px;
   text-align: center;
   float: left;
 }
-.header_logonav .search {
+
+.search {
   width: 560px;
   float: left;
   margin-left: 10px;
 }
-.header_logonav .search_nav {
+
+.search_nav {
   position: relative;
   margin: 18px 0 0 0;
 }
-.header_logonav .searchbox {
+
+.searchbox {
   float: left;
   border: 2px solid #ff6600;
   border-right: 0;
   position: relative;
   background: #fff;
 }
-.header_logonav .searchbox .search-keyword {
+.searchbox .search-keyword {
   width: 458px;
   height: 32px;
   margin-top: 0;
@@ -252,7 +256,8 @@
   color: #999;
   outline: none;
 }
-.header_logonav .search-btn {
+
+.search-btn {
   width: 90px;
   height: 36px;
   margin-top: 0;
@@ -264,34 +269,36 @@
   font-size: 16px;
   color: #fff;
 }
-.header_logonav .navbox {
+
+.navbox {
   float: left;
   width: 100%;
   height: 18px;
   margin-top: 7px;
   overflow: hidden;
 }
-.header_logonav .navbox a {
+.navbox a {
   float: left;
   margin-right: 10px;
   white-space: nowrap;
   font-size: 12px;
   color: #666;
 }
-.header_logonav .navbox a:hover {
+.navbox a:hover {
   color: #f60;
 }
-.header_logonav .phonepics {
+
+.phonepics {
   float: right;
   margin-top: 17px;
   position: relative;
 }
-.header_logonav .phonepics .imgleft {
+.phonepics .imgleft {
   margin-right: 14px;
   position: relative;
   cursor: pointer;
 }
-.header_logonav .phonepics b {
+.phonepics b {
   width: 1px;
   height: 34px;
   background: #ddd;
@@ -300,6 +307,21 @@
   display: inline-block;
   position: absolute;
   font-weight: 700px;
+}
+
+.hovershow:hover .wx_code {
+  display: block;
+}
+
+.wx_code {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  background: #fff;
+  left: -69px;
+  top: 40px;
+  z-index: 9;
+  display: none;
 }
 
 .nav_bar {
@@ -323,11 +345,19 @@
   top: 40px;
   left: 0px;
 }
-.allbtn ul li {
+
+.subnavli {
   padding: 11px 0 9px 15px;
-  zoom: 1;
-  cursor: default;
   border-bottom: 1px solid #555;
+}
+.subnavli:hover {
+  background: #f7f7f7;
+}
+.subnavli:hover .subnavli_pop {
+  display: block;
+}
+.subnavli:hover .topli > a, .subnavli:hover .botli > a {
+  color: #666;
 }
 
 h2 a {
@@ -358,6 +388,83 @@ h2 a:hover {
 .botli a {
   color: #999;
   font-size: 12px;
+}
+
+.subnavli_pop {
+  display: none;
+  position: absolute;
+  padding: 10px 20px;
+  width: 770px;
+  left: 210px;
+  top: 0;
+  background-color: #f7f7f7;
+}
+.subnavli_pop dl {
+  padding-bottom: 6px;
+  color: #666666;
+  padding-top: 0px;
+  margin-right: -8px;
+  overflow: auto;
+}
+.subnavli_pop dt {
+  padding-left: 0px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff6600;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin-right: 8px;
+}
+.subnavli_pop dt a {
+  color: #ff6600;
+}
+.subnavli_pop a {
+  margin-right: 5px;
+  color: #666;
+  white-space: nowrap;
+}
+.subnavli_pop dd {
+  padding: 5px 0 0 0;
+  line-height: 22px;
+  float: left;
+}
+
+.ui-link span {
+  padding: 0 5px 0 15px;
+  display: inline-block;
+  color: #ddd;
+}
+
+.cate_channel_lk {
+  box-sizing: border-box;
+  width: 78px;
+  float: left;
+  margin: 8px 8px 0 0px;
+  overflow: hidden;
+  padding: 3px 0px 3px 7px;
+  background-color: #ff6600;
+  color: #fff !important;
+}
+
+.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.subnavli_popdetail {
+  padding: 0 5px;
+  float: left;
+}
+.subnavli_popdetail a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.subnavli_popdetail img {
+  height: 40px;
+}
+
+.pl-10 {
+  padding-left: 10px;
 }
 
 .nav_index {
@@ -426,6 +533,7 @@ h2 a:hover {
 
 .footer {
   position: relative;
+  z-index: 9999;
 }
 
 .f_ribbon {
@@ -554,7 +662,7 @@ h2 a:hover {
   position: fixed;
   right: -300px;
   bottom: 0;
-  z-index: 300;
+  z-index: 10000;
   height: 100%;
 }
 .sidebar_content:after {
@@ -568,21 +676,23 @@ h2 a:hover {
   width: 30px;
   height: 100%;
   background: #333;
-  z-index: 10000;
+  z-index: 1000;
 }
 
-.side_link a,
-.top a {
+.side_link .icon_links,
+.top .icon_links {
   display: block;
   width: 30px;
   height: 38px;
   font-size: 12px;
   position: relative;
+  z-index: 200;
 }
-.side_link i,
-.top i {
+.side_link .side_links,
+.top .side_links {
   display: inline-block;
-  background: url(https://static.ingping.com/yp/images/ibar_sprites-1.0.1.png) no-repeat;
+  background-image: url(https://static.ingping.com/yp/images/ibar_sprites-1.0.1.png);
+  background-repeat: no-repeat;
   cursor: pointer;
   vertical-align: top;
   position: absolute;
@@ -597,35 +707,40 @@ h2 a:hover {
   width: 30px;
   height: 315px;
 }
-.side_link .my_link {
+
+.my_link {
   width: 18px;
   height: 19px;
   background-position: 0 0;
   top: 10px;
   left: 6px;
 }
-.side_link .tel_link {
+
+.tel_link {
   width: 20px;
   height: 20px;
   top: 11px;
   left: 6px;
   background-position: 0 -175px;
 }
-.side_link .cart_link {
+
+.cart_link {
   background-position: 0px -29px;
   width: 23px;
   height: 18px;
   top: 11px;
   left: 6px;
 }
-.side_link .money_link {
+
+.money_link {
   width: 18px;
   height: 18px;
   background-position: 0 -57px;
   top: 10px;
   left: 6px;
 }
-.side_link img {
+
+.pen_link {
   width: 20px;
   margin: 0 auto;
   position: absolute;
@@ -633,136 +748,198 @@ h2 a:hover {
   left: 5px;
 }
 
-/* //客服服务二级导航
-.tel_link_nav{
-    position: relative;
+.link_nav {
+  position: relative;
 }
-.tel_link_nav {
-    &:hover{
-        ul{
-            display: block;
-        }
-    }
-    .serve_tel {
-        display: none;
-        width: 245px;
-        position: absolute;
-        top:0;
-        left: -245px;
-        z-index: 8;
-        border: 1px solid #eaeaea;
-        background: #fff;
-    }
+.link_nav:hover .link_main {
+  display: block;
+}
 
-    li {
-        width: 90%;
-        margin: 0 auto;
-    }
-//导航1
-    .ontime {
-        border-bottom: 1px solid #eaeaea;
-        padding-bottom: 5px;
-        position: relative;
-        height: 135px;
+.link_main {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -265px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 2px 0 0 2px;
+  z-index: 300;
+}
 
-        img {
-            width: 100px;
-            position: absolute;
-            top: 20px;
-            left: 15px;
-            margin-top: -5px;
-        }
-    }
+.right_white {
+  right: -5px;
+  top: 15px;
+  width: 5px;
+  height: 9px;
+  background-position: 0 -253px;
+}
 
-    .ontime_text {
-        position: absolute;
-        top: 60px;
-        right: 23px;
-        text-align: right;
+.my_link_box {
+  overflow: hidden;
+  height: 120px;
+}
 
-        p {
-            padding: 5px 0;
-        }
+.my_link_imgbox {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 6px 20px 0 5px;
+  overflow: hidden;
+}
 
-        a {
-            float: right;
-            display: block;
-            color: #fff;
-            border: 1px solid #ff6600;
-            border-radius: 20px;
-            width: 80px;
-            height: 27px;
-            line-height: 26px;
-            font-size: 14px;
-            text-align: center;
-            background: #ff6600;
-        }
-    }
+.user_info {
+  overflow: hidden;
+  padding-top: 30px;
+  width: 120px;
+  float: left;
+}
+.user_info li {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-    .text-666 {
-        line-height: 18px;
-        color: #666;
-    }
-//导航2
-    .serve_time {
-        padding: 25px 0;
-        height: 90px;
-        .icon-tel{
-            float: left;
-            display: block;
-            width: 60px;
-            height: 60px;
-        }
-        i{
-            font-size: 42px;
-            color: #777;
-            top: 2px;
-            left: 10px;
-            position: relative;
-        }
-        .text-p{
-            float: left;
-            height: 41px;
-        }
-        .span1{
-            line-height: 18px;
-            display: block;
-            font-weight: 700;
-            font-size: 20px;
-            color: #ff6600;
-            margin-bottom: -5px;
-        }
-        .span2{
-            line-height: 18px;
-            color: #666;
-        }
+.login_btnbox {
+  border-top: 1px dotted #d5d5d5;
+  overflow: hidden;
+  padding-top: 15px;
+  clear: both;
+}
+.login_btnbox a {
+  width: 94px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid;
+  color: #333;
+  float: left;
+  background: #fff;
+  border-color: #e9e9e9;
+}
+.login_btnbox a:hover {
+  border-color: #ff6600;
+  color: #333;
+}
+.login_btnbox .login_order {
+  margin: 0 10px 0 35px;
+}
 
-    }
-//导航3
-    .wechat {
-        padding: 15px 0;
-        border-top: 1px solid #e9e9e8;
-        padding-left: 15px;
-        span{
-            float: left;
-        }
-    }
-    .wechat-1{
-        width: 60px;
-        margin-top: 20px;
-    }
-    .wechat-2{
-        margin-top: 22px;
-        color: #959595;
-        i{
-            display: block;
-            line-height: 16px;
-        }
-    }
-    .wechat-3{
-        margin-left: 10px;
-    }
-} */
+.serve_tel {
+  display: block;
+  width: 245px;
+  z-index: 8;
+}
+.serve_tel li {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ontime {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 5px;
+  position: relative;
+  height: 135px;
+}
+.ontime img {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  margin-top: -5px;
+}
+
+.ontime_text {
+  position: absolute;
+  top: 60px;
+  right: 23px;
+  text-align: right;
+}
+.ontime_text p {
+  padding: 5px 0;
+}
+.ontime_text a {
+  float: right;
+  display: block;
+  color: #fff;
+  border: 1px solid #ff6600;
+  border-radius: 20px;
+  width: 80px;
+  height: 27px;
+  line-height: 26px;
+  font-size: 14px;
+  text-align: center;
+  background: #ff6600;
+}
+
+.text-666 {
+  line-height: 18px;
+  color: #666;
+}
+
+.serve_time {
+  padding: 25px 0;
+  height: 90px;
+}
+.serve_time .icon-tel {
+  float: left;
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.serve_time i {
+  font-size: 42px;
+  color: #777;
+  top: -12px;
+  left: 10px;
+  position: relative;
+}
+.serve_time .text-p {
+  float: left;
+  height: 41px;
+}
+.serve_time .span1 {
+  line-height: 18px;
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ff6600;
+  margin-bottom: 5px;
+}
+.serve_time .span2 {
+  line-height: 18px;
+  color: #666;
+}
+
+.wechat {
+  padding: 15px 0;
+  border-top: 1px solid #e9e9e8;
+  padding-left: 15px;
+}
+.wechat span {
+  float: left;
+}
+
+.wechat-1 {
+  width: 60px;
+  margin-top: 20px;
+}
+
+.wechat-2 {
+  margin-top: 22px;
+  color: #959595;
+}
+.wechat-2 i {
+  display: block;
+  line-height: 16px;
+}
+
+.wechat-3 {
+  margin-left: 10px;
+}
+
 #shopcart a {
   line-height: 16px;
   height: 133px;
@@ -800,20 +977,33 @@ h2 a:hover {
 }
 
 .top {
+  overflow: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 30px;
   z-index: 1;
 }
-.top .topli {
+
+.topli_code {
   width: 18px;
   height: 18px;
   top: 11px;
   left: 6px;
   background-position: 0 -302px;
 }
-.top .topback {
+
+.topli_link_main {
+  left: -200px;
+  width: 200px;
+  height: 200px;
+  top: -162px;
+}
+.topli_link_main .right_white {
+  top: 177px;
+}
+
+.topback {
   background-position: 0 -201px;
   width: 17px;
   height: 14px;
@@ -1020,6 +1210,7 @@ h2 a:hover {
   }
 }
 .louti {
+  z-index: 99999;
   display: block;
   width: 40px;
   background: #ccc;
@@ -1154,6 +1345,9 @@ h2 a:hover {
   border-color: #e8e8e8;
   border-style: solid;
   text-align: center;
+}
+.quickbtn li:hover p {
+  color: #f60;
 }
 .quickbtn li:nth-child(3n) {
   border-width: 0px 0 1px 0px;

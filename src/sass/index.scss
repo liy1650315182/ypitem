@@ -11,6 +11,7 @@
 
 //楼梯效果
 .louti {
+    z-index: 99999;
     display: block;
     width: 40px;
     background: #ccc;
@@ -161,6 +162,12 @@
         border-color: #e8e8e8;
         border-style: solid;
         text-align: center;
+
+        &:hover {
+            p {
+                color: #f60;
+            }
+        }
     }
 
     li:nth-child(3n) {
@@ -567,7 +574,6 @@
         text-align: left;
         float: left;
         color: #999;
-
     }
 
     .date {

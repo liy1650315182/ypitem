@@ -13,7 +13,7 @@
     position: fixed;
     right: -300px;
     bottom: 0;
-    z-index: 300;
+    z-index: 10000;
     height: 100%;
 }
 
@@ -23,30 +23,32 @@
     width: 30px;
     height: 100%;
     background: #333;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 
 //a和i的共有部分
 .side_link,
 .top {
-    a {
+    .icon_links {
         display: block;
         width: 30px;
         height: 38px;
         font-size: 12px;
         position: relative;
+        z-index: 200;
     }
 
-    i {
+    .side_links {
         display: inline-block;
-        background: url(https://static.ingping.com/yp/images/ibar_sprites-1.0.1.png) no-repeat;
+        background-image: url(https://static.ingping.com/yp/images/ibar_sprites-1.0.1.png);
+        background-repeat:  no-repeat;
         cursor: pointer;
         vertical-align: top;
         position: absolute;
     }
 }
-
+// a
 .side_link {
     position: absolute;
     top: 50%;
@@ -55,178 +57,254 @@
     z-index: 200;
     width: 30px;
     height: 315px;
-
-    .my_link {
-        width: 18px;
-        height: 19px;
-        background-position: 0 0;
-        top: 10px;
-        left: 6px;
-    }
-
-    .tel_link {
-        width: 20px;
-        height: 20px;
-        top: 11px;
-        left: 6px;
-        background-position: 0 -175px;
-    }
-
-    .cart_link {
-        background-position: 0px -29px;
-        width: 23px;
-        height: 18px;
-        top: 11px;
-        left: 6px;
-    }
-
-    .money_link {
-        width: 18px;
-        height: 18px;
-        background-position: 0 -57px;
-        top: 10px;
-        left: 6px;
-    }
-
-    img {
-        width: 20px;
-        margin: 0 auto;
-        position: absolute;
-        top: 8px;
-        left: 5px;
-    }
 }
 
-/* //客服服务二级导航
-.tel_link_nav{
+// i
+.my_link {
+    width: 18px;
+    height: 19px;
+    background-position: 0 0;
+    top: 10px;
+    left: 6px;
+}
+
+.tel_link {
+    width: 20px;
+    height: 20px;
+    top: 11px;
+    left: 6px;
+    background-position: 0 -175px;
+}
+
+.cart_link {
+    background-position: 0px -29px;
+    width: 23px;
+    height: 18px;
+    top: 11px;
+    left: 6px;
+}
+
+.money_link {
+    width: 18px;
+    height: 18px;
+    background-position: 0 -57px;
+    top: 10px;
+    left: 6px;
+}
+
+.pen_link {
+    width: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 8px;
+    left: 5px;
+}
+//划过侧边栏时的显示和隐藏
+.link_nav {
     position: relative;
-}
-.tel_link_nav {
-    &:hover{
-        ul{
+    &:hover {
+        .link_main {
             display: block;
         }
     }
-    .serve_tel {
-        display: none;
-        width: 245px;
-        position: absolute;
-        top:0;
-        left: -245px;
-        z-index: 8;
-        border: 1px solid #eaeaea;
-        background: #fff;
+}
+.link_main{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -265px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    border-radius: 2px 0 0 2px;
+    z-index: 300;
+}
+.right_white{
+    right: -5px;
+    top: 15px;
+    width: 5px;
+    height: 9px;
+    background-position: 0 -253px;
+}
+//个人中心显示和隐藏
+.my_link_box{
+    overflow: hidden;
+    height: 120px;
+}
+.my_link_imgbox{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 6px 20px 0 5px;
+    overflow: hidden;
+}
+.user_info{
+    overflow: hidden;
+    padding-top: 30px;
+    width: 120px;
+    float: left;
+    li{
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
     }
+}
+.login_btnbox{
+    border-top: 1px dotted #d5d5d5;
+    overflow: hidden;
+    padding-top: 15px;
+    clear: both;
+    a{
+        width: 94px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid;
+        color: #333;
+        float: left;
+        background: #fff;
+        border-color: #e9e9e9;
+        &:hover{
+            border-color: #ff6600;
+            color: #333;
+        }
+    }
+    .login_order{
+        margin: 0 10px 0 35px;
+    }
+}
 
+//客服服务二级导航
+.serve_tel {
+    display: block;
+    width: 245px;
+    z-index: 8;
     li {
         width: 90%;
         margin: 0 auto;
     }
+}
+
 //导航1
-    .ontime {
-        border-bottom: 1px solid #eaeaea;
-        padding-bottom: 5px;
-        position: relative;
-        height: 135px;
+.ontime {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+    position: relative;
+    height: 135px;
 
-        img {
-            width: 100px;
-            position: absolute;
-            top: 20px;
-            left: 15px;
-            margin-top: -5px;
-        }
-    }
-
-    .ontime_text {
+    img {
+        width: 100px;
         position: absolute;
-        top: 60px;
-        right: 23px;
-        text-align: right;
+        top: 20px;
+        left: 15px;
+        margin-top: -5px;
+    }
+}
 
-        p {
-            padding: 5px 0;
-        }
+.ontime_text {
+    position: absolute;
+    top: 60px;
+    right: 23px;
+    text-align: right;
 
-        a {
-            float: right;
-            display: block;
-            color: #fff;
-            border: 1px solid #ff6600;
-            border-radius: 20px;
-            width: 80px;
-            height: 27px;
-            line-height: 26px;
-            font-size: 14px;
-            text-align: center;
-            background: #ff6600;
-        }
+    p {
+        padding: 5px 0;
     }
 
-    .text-666 {
+    a {
+        float: right;
+        display: block;
+        color: #fff;
+        border: 1px solid #ff6600;
+        border-radius: 20px;
+        width: 80px;
+        height: 27px;
+        line-height: 26px;
+        font-size: 14px;
+        text-align: center;
+        background: #ff6600;
+    }
+}
+
+.text-666 {
+    line-height: 18px;
+    color: #666;
+}
+
+//导航2
+.serve_time {
+    padding: 25px 0;
+    height: 90px;
+
+    .icon-tel {
+        float: left;
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    i {
+        font-size: 42px;
+        color: #777;
+        top: -12px;
+        left: 10px;
+        position: relative;
+    }
+
+    .text-p {
+        float: left;
+        height: 41px;
+    }
+
+    .span1 {
+        line-height: 18px;
+        display: block;
+        font-weight: 700;
+        font-size: 20px;
+        color: #ff6600;
+        margin-bottom: 5px;
+    }
+
+    .span2 {
         line-height: 18px;
         color: #666;
     }
-//导航2
-    .serve_time {
-        padding: 25px 0;
-        height: 90px;
-        .icon-tel{
-            float: left;
-            display: block;
-            width: 60px;
-            height: 60px;
-        }
-        i{
-            font-size: 42px;
-            color: #777;
-            top: 2px;
-            left: 10px;
-            position: relative;
-        }
-        .text-p{
-            float: left;
-            height: 41px;
-        }
-        .span1{
-            line-height: 18px;
-            display: block;
-            font-weight: 700;
-            font-size: 20px;
-            color: #ff6600;
-            margin-bottom: -5px;
-        }
-        .span2{
-            line-height: 18px;
-            color: #666;
-        }
 
-    }
+}
+
 //导航3
-    .wechat {
-        padding: 15px 0;
-        border-top: 1px solid #e9e9e8;
-        padding-left: 15px;
-        span{
-            float: left;
-        }
+.wechat {
+    padding: 15px 0;
+    border-top: 1px solid #e9e9e8;
+    padding-left: 15px;
+
+    span {
+        float: left;
     }
-    .wechat-1{
-        width: 60px;
-        margin-top: 20px;
+}
+
+.wechat-1 {
+    width: 60px;
+    margin-top: 20px;
+}
+
+.wechat-2 {
+    margin-top: 22px;
+    color: #959595;
+
+    i {
+        display: block;
+        line-height: 16px;
     }
-    .wechat-2{
-        margin-top: 22px;
-        color: #959595;
-        i{
-            display: block;
-            line-height: 16px;
-        }
-    }
-    .wechat-3{
-        margin-left: 10px;
-    }
-} */
+}
+
+.wechat-3 {
+    margin-left: 10px;
+}
+
+
 
 #shopcart a {
     line-height: 16px;
@@ -266,27 +344,38 @@
 
 //回到顶部
 .top {
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 30px;
     z-index: 1;
+}
 
-    .topli {
-        width: 18px;
-        height: 18px;
-        top: 11px;
-        left: 6px;
-        background-position: 0 -302px;
+.topli_code {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 6px;
+    background-position: 0 -302px;
+}
+//二维码的显示和隐藏
+.topli_link_main{
+    left: -200px;    
+    width: 200px;
+    height: 200px;
+    top: -162px;
+    .right_white{
+        top: 177px;
     }
+}
 
-    .topback {
-        background-position: 0 -201px;
-        width: 17px;
-        height: 14px;
-        top: 12px;
-        left: 7px;
-    }
+.topback {
+    background-position: 0 -201px;
+    width: 17px;
+    height: 14px;
+    top: 12px;
+    left: 7px;
 }
 
 //侧边栏隐藏部分
@@ -351,7 +440,8 @@
         padding: 5px 10px;
         font-size: 14px;
     }
-    a{
+
+    a {
         background: #ff6600;
         color: #fff;
         height: 40px;
@@ -368,88 +458,107 @@
 .cart_num_fl {
     line-height: 28px;
     float: left;
-    i{
+
+    i {
         color: #f60;
     }
 }
-.cart_num_fr{
+
+.cart_num_fr {
     float: right;
-    em{
+
+    em {
         color: #f60;
     }
-    .shopping_money{
+
+    .shopping_money {
         color: #ff6600;
         font-size: 18px;
     }
 }
 
 //购物车列表部分
-.cart-goods-list{
+.cart-goods-list {
     margin-top: 45px;
     margin-bottom: 40px;
-    ul{
+
+    ul {
         background: #fff;
         border-top: 1px solid #ededed;
         padding: 0 12px;
         border-bottom: 1px solid #ededed;
     }
-    .goods-li{
+
+    .goods-li {
         overflow: hidden;
         padding: 15px 0px;
         border-bottom: 1px dashed #e1e1e1;
         position: relative;
     }
 }
-.goods-image{
+
+.goods-image {
     float: left;
-    img{
+
+    img {
         width: 60px;
         height: 60px;
         border: 1px solid #e1e1e1;
         margin-right: 7px;
     }
 }
-.goods-details{
+
+.goods-details {
     width: 74%;
     float: left;
-    h3{
+
+    h3 {
         height: 34px;
         overflow: hidden;
         margin-bottom: 9px;
-        a{
+
+        a {
             font-size: 12px;
             line-height: 16px;
             color: #616161;
         }
     }
 }
-.goods-details-price{
+
+.goods-details-price {
     font-size: 14px;
     color: #ff6600;
-    span{
+
+    span {
         color: #616161;
     }
-    .goods-delete{
+
+    .goods-delete {
         float: right;
-        img{
+
+        img {
             margin-top: -5px;
         }
     }
 }
-.gift-ul{
+
+.gift-ul {
     margin-top: 10px;
     padding: 0;
 }
-.gift-li{
+
+.gift-li {
     padding: 15px 12px;
 }
-.goods-gift{
+
+.goods-gift {
     position: relative;
     clear: both;
     border-bottom: 1px dashed #e1e1e1;
     margin-bottom: 15px;
 }
-.gift-label{
+
+.gift-label {
     padding: 0 5px;
     background: #e43e41;
     color: #fff;
@@ -458,7 +567,8 @@
     font-size: 14px;
     width: 38px;
     position: relative;
-    &::before{
+
+    &::before {
         content: "";
         position: absolute;
         bottom: -3px;
@@ -469,7 +579,8 @@
         border-left: 5px solid #e43e41;
     }
 }
-.gift-tips{
+
+.gift-tips {
     position: absolute;
     left: 45px;
     width: 220px;

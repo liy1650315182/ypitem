@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/other.css">
+
+</head>
+
+<body>
+    <!-- header中部左右导航 -->
+    <div class="header_nav">
+        <div class="container">
+            <!-- header中部左导航 -->
+            <dl class="tnleft">
+                <dd class="welcome">
+                    <h5>
+                        <span id="login_info">您好！欢迎来到音平商城！</span>
+                        <span id="user_info">
+                            [
+                            <a name="t-login" href="login.html" class="track" title="登录音平商城">请登录</a>
+                            |
+                            <a name="t-register" href="registor.html" class="track" title="注册">免费注册</a>
+                            ]
+                        </span>
+                    </h5>
+                </dd>
+            </dl>
+            <!-- header中部右导航 -->
+            <dl class="tnright">
+                <dd class="my-yp">
+                    <h3 class="tnright_h3">
+                        <a href="#">
+                            <i class="iconfont"></i>
+                            我的音平
+                            <em></em>
+                        </a>
+                    </h3>
+                    <!-- 二级导航 -->
+                    <ul>
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">我要评价</a></li>
+                        <li><a href="#">我的优惠券</a></li>
+                    </ul>
+                </dd>
+                <dd>
+                    <h3 class="tnright_h3">
+                        <a href="#">
+                            <i class="iconfont"></i>
+                            我的购物车
+                        </a>
+                    </h3>
+                </dd>
+                <dd>
+                    <h3 class="tnright_h3">
+                        <a href="#">
+                            <i class="iconfont"></i>
+                            企业采购
+                        </a>
+                    </h3>
+                </dd>
+                <dd class="serve">
+                    <h3 class="tnright_h3">
+                        <a href="#">
+                            <img src="https://static.ingping.com/yp/images/onlinekefu-1.0.3.gif" alt="" style="vertical-align: middle; margin-top: -5px;">
+                            客服服务
+                            <em></em>
+                        </a>
+                    </h3>
+                    <!-- 二级导航 -->
+                    <ul class="serve_tel">
+                        <li class="ontime">
+                            <img src="https://static.ingping.com/yp/images/ingge-1.0.1.png" alt="">
+                            <div class="ontime_text">
+                                <p class="clearfix">
+                                    <a href="#">在线客服</a>
+                                </p>
+                                <p class="text-666">在线时间：08:30 - 23:00</p>
+                            </div>
+                        </li>
+                        <li class="serve_time">
+                            <span class="icon-tel"><i class="iconfont"></i></span>
+                            <p class="text-p">
+                                <span class="span1">400 700 3638</span>
+                                <span class="span2">服务时间：08:30 - 23:00</span>
+                            </p>
+                        </li>
+                        <li class="wechat clearfix">
+                            <span class="wechat-1">
+                                <img src="https://static.ingping.com/yp/images/wechat-icon-1.0.0.png" alt="">
+                            </span>
+                            <span class="wechat-2">
+                                <i>微信客服</i>
+                                <i>扫一扫</i>
+                            </span>
+                            <span class="wechat-3">
+                                <img src="https://static.ingping.com/yp/images/wechatqr-1.0.0.jpg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 购物车的内容部分 -->
+    <div class="cart_main clearfix">
+        <!-- 购物车的头部 -->
+        <div class="cart_header clearfix">
+            <div id="logo">
+                <a href="http://10.31.162.37/js/ypitem/src/home.html" title="音平商城">
+                    <img width="220" height="75" alt="音平商城" src="https://img.ingping.com/images/logo.png">
+                </a>
+            </div>
+            <div class="shoppingprocess clearfix">
+                <ul>
+                    <li class="shopprocess_td1 pro_current">1 我的购物车</li>
+                    <li class="shopprocess_td1 pro_other">2 确认订单信息</li>
+                    <li class="shopprocess_td1 pro_other">3 成功提交订单</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 购物车不空的时候 -->
+        <div class="cart_content">
+            <!-- 全部商品 -->
+            <h3 class="m_mycart">
+                全部商品&ensp;
+                <span class="shopping_amount">3</span>
+                <span id="cuxiaoAD" class="tip" style="display: block;">
+                    <img class="alertt" src="https://www.ingping.com/images/cart/goddnessAlert-1.0.0.png">
+                    <span></span>
+                </span>
+            </h3>
+            <!-- 商品内容 -->
+            <!-- <div class="head f-cb">
+                <div class="col col1">
+                    <input type="checkbox" class="u-chk" name="selectAll" checked="" style="outline:none;">
+                    <label class="lab">全选</label>
+                </div>
+                <div class="col col2">商品信息</div>
+                <div class="col col3">单价(元)</div>
+                <div class="col col4">数量</div>
+                <div class="col col5">金额(元)</div>
+                <div class="col col6">操作</div>
+            </div> -->
+            <!-- 省钱小提示 -->
+            <div class="m_shengqian">
+                <i class="iconfont"></i>
+                省钱小提示：<span class="ml-20">1、在线支付可使用积分抵现金</span>
+                <span class="ml-20">2、在线支付可获赠等额积分</span>
+                <span class="ml-20">3、晒单成功可领取微信红包</span>
+                <span class="ml-20">4、评论可获取积分</span>
+            </div>
+        </div>
+        <!-- 购物车空空如也 -->
+        <div class="m_nocart">
+            <div class="m_nocart_wrap">
+                <p>购物车里空空如也，赶紧去&nbsp;<a href="http://10.31.162.37/js/ypitem/src/home.html">逛逛吧&gt;</a></p>
+                <p>或者您可以先进行&nbsp;<a href="login.html">登录&gt;</a></p>
+            </div>
+        </div>
+
+        <!-- 关于购物车 -->
+        <div class="cart_about clearfix">
+            <div class="cart_about_title">关于 "我的购物车"</div>
+            <div class="i cart_about_word">
+                <p>
+                    ·为方便您提交订单，您添加至"我的购物车"中已经选择的、尚未提交订单的商品清单，我们将为您保留一段时间。<br>
+                    ·在商品保留期间，您所选择商品的价格、优惠政策、库存、配送时间等信息可能会有所变化，请以网页信息为准。<br>
+                </p>
+                <p> &nbsp;&nbsp;您在购物过程中有任何疑问，请查阅 <a href="#">帮助中心</a></p>
+            </div>
+            <div class="cart_fr">
+                <p>您对订购商品或流程有问题</p>
+                <a href="#" class="tab-dg">
+                    <i class="iconfont f-22 mr-5"></i>
+                    <span>专业客服导购</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导入侧边栏 -->
+    <div class="aside"></div>
+
+
+
+    <!-- 最底部 -->
+    <div class="f_info">
+        <div class="container clearfix">
+            <p class="f-16"><b>音平商城 —— 大型正品音乐设备网购商城</b></p>
+            <p class="mt-10 lh-22">增值电信业务经营许可证：
+                <a href="#">粤B2-20110237</a> / <a href="#">粤ICP备11032710号-1</a> /
+                <a href="#">粤公网安备 44130202000152号</a>
+                <br>
+                © 2011-2018 音平公司版权所有，并保留所有权利（<a href="#">著作权及商标声明</a>）。 特聘律师团：广东斯明律师事务所
+            </p>
+            <div class="mt-10">
+                <a href="#" title="惠州音平电声科技股份有限公司" class="info_logo">
+                    <img src="https://static.ingping.com/yp/images/bz_gshd-1.0.2.png" alt="工商红盾电子标识">
+                </a>
+                <a href="#" title="可信网站示范单位" class="info_logo">
+                    <img src="https://static.ingping.com/yp/images/bz_sfdw-1.0.2.png" alt="可信网站示范单位">
+                </a>
+                <a href="#" title="广东省电子商务示范企业" class="info_logo">
+                    <img src="https://static.ingping.com/yp/images/bz_sfqy-1.0.2.png" alt="广东省电子商务示范企业">
+                </a>
+                <a href="#" title="安全联盟 实名认证" class="info_logo">
+                    <img src="https://static.ingping.com/yp/images/bz_smrz-1.0.2.png" alt="安全联盟 实名认证">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/cart.js"></script>
+</body>
+
+</html>

@@ -70,11 +70,6 @@
   background: url(../images/topNav_select.png);
 }
 
-.my-yp:hover ul,
-.serve:hover ul {
-  display: block;
-}
-
 .my-yp ul {
   display: none;
   position: absolute;
@@ -94,9 +89,6 @@
   padding: 0 15px;
 }
 
-.serve:hover ul {
-  display: block;
-}
 .serve .serve_tel {
   display: none;
   width: 245px;
@@ -284,9 +276,6 @@
   font-size: 12px;
   color: #666;
 }
-.navbox a:hover {
-  color: #f60;
-}
 
 .phonepics {
   float: right;
@@ -307,10 +296,6 @@
   display: inline-block;
   position: absolute;
   font-weight: 700px;
-}
-
-.hovershow:hover .wx_code {
-  display: block;
 }
 
 .wx_code {
@@ -353,9 +338,6 @@
 .subnavli:hover {
   background: #f7f7f7;
 }
-.subnavli:hover .subnavli_pop {
-  display: block;
-}
 .subnavli:hover .topli > a, .subnavli:hover .botli > a {
   color: #666;
 }
@@ -388,6 +370,7 @@ h2 a:hover {
 .botli a {
   color: #999;
   font-size: 12px;
+  margin-right: 5px;
 }
 
 .subnavli_pop {
@@ -489,10 +472,6 @@ h2 a:hover {
   color: #ff5600;
 }
 
-.sub_nav:hover .sub_nav_main {
-  display: block;
-}
-
 .sub_nav_main {
   display: none;
   z-index: 12000;
@@ -528,7 +507,59 @@ h2 a:hover {
 }
 
 .nav_right {
+  width: 220px;
+  overflow: hidden;
   float: right;
+}
+
+.nav_right_1 {
+  width: 220px;
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+  overflow: hidden;
+  padding-right: 24px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.nav_right_2 {
+  position: relative;
+  height: 39px;
+}
+.nav_right_2 ul {
+  height: 195px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0px;
+  margin: 0px;
+}
+.nav_right_2 li {
+  height: 39px;
+}
+
+.top_bot {
+  position: absolute;
+  right: -15px;
+  top: 8px;
+}
+.top_bot a {
+  background: url(https://static.ingping.com/yp/images/index_newadd-1.0.0.png) no-repeat -12px 0;
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+.top_bot .next {
+  background-position: -12px -24px;
+}
+
+.top_bot .prev:hover {
+  background-position: 0 0;
+}
+
+.top_bot .next:hover {
+  background-position: 0 -24px;
 }
 
 .footer {
@@ -1204,28 +1235,23 @@ h2 a:hover {
   line-height: 20px;
 }
 
-@media screen and (max-width: 1300px) and (min-width: 1270px) {
-  #nav_panel {
-    display: none;
-  }
-}
-.louti {
+#nav_panel {
   z-index: 99999;
-  display: block;
   width: 40px;
   background: #ccc;
   position: fixed;
   bottom: 50px;
   left: 50%;
   margin-left: -650px;
-  transition: all 0.3s ease;
-  transform-origin: 0 100%;
-  transform: scale(1);
 }
-.louti li {
-  border-bottom: 1px solid #f1f1f1;
+#nav_panel li:hover {
+  color: #fff;
+  position: relative;
+  background: #ff6600;
 }
-.louti a {
+#nav_panel li,
+#nav_panel p {
+  display: block;
   background: #666;
   color: #fff;
   display: block;
@@ -1234,23 +1260,18 @@ h2 a:hover {
   padding: 5px 5px 0 5px;
   line-height: 15px;
   text-align: center;
+  border-bottom: 1px solid #f1f1f1;
 }
-.louti a:hover {
-  color: #fff;
-  background: #f60;
-}
-
-.current {
-  color: #fff;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  display: block;
+#nav_panel .first_li {
+  line-height: 35px;
   font-size: 14px;
   position: relative;
   background: #ff6600;
-  border-bottom: 1px solid #f1f1f1;
+}
+#nav_panel .current {
+  color: #fff;
+  position: relative;
+  background: #ff6600;
 }
 
 .banner_lunbo {
@@ -1263,19 +1284,50 @@ h2 a:hover {
   position: relative;
 }
 .lunbo_img li {
-  background: #df004d;
   position: absolute;
   left: 0px;
   top: 0px;
   display: list-item;
-  opacity: 1;
   width: 100% !important;
   height: 450px;
+  opacity: 0;
+}
+.lunbo_img li:nth-of-type(1) {
+  opacity: 1;
 }
 .lunbo_img .img {
   width: 770px;
-  margin-left: 210px;
+  margin: 0 auto;
   position: relative;
+}
+.lunbo_img .img img {
+  width: 770px;
+  height: 450px;
+}
+
+.lunbo_span {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.lunbo_span span {
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 6px;
+  margin: 4px;
+  background: #fff;
+  overflow: hidden;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+}
+.lunbo_span .on {
+  opacity: 1;
 }
 
 .tab_quickbtn {
@@ -1372,8 +1424,6 @@ h2 a:hover {
 .guess-main,
 .new-main,
 .ypnews-main {
-  margin-right: -5px;
-  margin-left: -5px;
   margin-top: 15px;
 }
 
@@ -1388,6 +1438,58 @@ h2 a:hover {
   padding-right: 5px;
 }
 
+.guess-imgs:hover p {
+  color: #f60;
+  transition: all 0.4s;
+}
+.guess-imgs:hover img {
+  margin-left: 10px;
+}
+
+#main .hover_move:hover img {
+  right: 25px;
+}
+#main .hover_move:hover .left-imgs,
+#main .hover_move:hover .right-imgs {
+  right: 15px;
+}
+
+.eq-imgs {
+  position: relative;
+}
+
+.eq-imgs a::before {
+  transform: skew(20deg, 0deg);
+  transition: all 0.5s;
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: -100%;
+}
+
+.eq-imgs a::after {
+  transform: skew(20deg, 0deg);
+  transition: all 0.5s;
+  position: absolute;
+  content: "";
+  width: 70%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  right: -100%;
+}
+
+.eq-imgs a:hover::before {
+  left: -20%;
+}
+
+.eq-imgs a:hover::after {
+  right: -20%;
+}
+
 .text {
   overflow: hidden;
   margin: 30px 0px 10px 0;
@@ -1399,7 +1501,7 @@ h2 a:hover {
   font-size: 26px;
 }
 .text h2 i {
-  font-size: 26px;
+  font-size: 30px;
   color: #ff6600;
 }
 
@@ -1429,9 +1531,10 @@ h2 a:hover {
   display: block;
 }
 .guess-goods a img {
-  margin: 15px 0;
+  margin: 15px 20px;
+  transition: all 0.4s;
 }
-.guess-goods a .goods-name {
+.guess-goods .goods-name {
   overflow: hidden;
   text-align: left;
   height: 38px;
@@ -1485,28 +1588,31 @@ h2 a:hover {
   width: 570px;
   margin-bottom: 10px;
 }
-.all-mid .mid-top .top-imgs {
+.all-mid .mid-top img {
   position: absolute;
   bottom: 0px;
   right: 20px;
   width: 190px;
+  transition: all 0.4s;
 }
 .all-mid .mid-top-l {
   width: 280px;
 }
+.all-mid .mid-right {
+  width: 210px;
+  float: right;
+}
 .all-mid .mid-left {
   width: 350px;
   float: left;
+  position: relative;
 }
-.all-mid .mid-left .left-imgs {
+.all-mid .mid-left img {
   position: absolute;
   bottom: 0px;
   right: 10px;
   width: 160px;
-}
-.all-mid .mid-right {
-  width: 210px;
-  float: right;
+  transition: all 0.4s;
 }
 
 .all-right {
@@ -1566,6 +1672,7 @@ h2 a:hover {
   bottom: 0px;
   right: 10px;
   width: 130px;
+  transition: all 0.4s;
 }
 
 .icon {
@@ -1581,17 +1688,73 @@ h2 a:hover {
   background-position: 0px 0px;
 }
 
-.same .all-left {
+.record-left {
   float: left;
+  width: 400px;
+  height: 400px;
 }
-.same .all-mid {
-  float: right;
-  width: 790px;
-  margin-right: 0px;
+
+.record-mid {
+  float: left;
+  width: 350px;
+  position: relative;
+  margin: 0 10px;
 }
-.same .fl {
+.record-mid .record-mid-img {
+  width: 350px;
+  height: 195px;
+  float: left;
+  position: relative;
+  display: block;
+  background: #fff;
+}
+.record-mid .record-mid-img img {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  width: 160px;
+  transition: all 0.4s;
+}
+.record-mid a:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.record-right {
+  float: left;
+  width: 430px;
+  position: relative;
+}
+.record-right .record-right-img {
+  width: 210px;
+  height: 195px;
+  background: #fff;
+  float: left;
+  display: block;
+  position: relative;
+}
+.record-right img {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  width: 130px;
+  transition: all 0.4s;
+}
+.record-right a:nth-of-type(2n) {
+  margin-left: 10px;
+}
+.record-right a:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+.record-right a:nth-of-type(2) {
+  margin-bottom: 10px;
+}
+
+.fl {
   float: left;
   margin-right: 10px;
+}
+
+#main .mb-10 {
   margin-bottom: 10px;
 }
 
@@ -1634,10 +1797,14 @@ h2 a:hover {
   background-position: 0px -130px;
 }
 
-.new-imgs,
-.ypnews-imgs {
+.new-main .new-imgs,
+.new-main .ypnews-imgs,
+.ypnews-main .new-imgs,
+.ypnews-main .ypnews-imgs {
+  width: 235px;
+  margin-right: 5px;
   background: #fff;
-  margin: 0 3px;
+  padding: 0px;
 }
 
 .pro-img {

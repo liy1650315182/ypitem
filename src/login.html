@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>音平账号-登录</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/other.css">
 </head>
 
 <body>
     <div id="login-index">
+        <!-- 导入头部 -->
         <div class="login-reg-h"></div>
         <div class="login-content">
             <div class="content-bg">
@@ -23,38 +26,43 @@
                 <div class="login-main">
                     <div class="main">
                         <p class="main-title">密码登录</p>
-                        <div class="user">
-                            <input type="text" class="text">
-                            <i class="placeholder">手机号/用户名/邮箱</i>
-                        </div>
-                        <div class="pass">
-                            <input type="password" class="password">
-                            <i class="placeholder">密码</i>
-                        </div>
-                        <div class="forget clearfix">
-                            <a href="#">忘记密码?</a>
-                        </div>
-                        <input type="button" value="立即登录" id="submit" class="denglu">
-                        <div class="login-foot">
-                            <div class="f-main">
-                                <dl>
-                                    <dt>合作伙伴账号登录：</dt>
-                                    <dd><a href="#" class="weixin"></a></dd>
-                                    <dd><a href="#" class="zfb"></a></dd>
-                                    <dd><a href="#" class="qq"></a></dd>
-                                    <dd><a href="#" class="weibo"></a></dd>
-                                </dl>
+                        <form method="post" onsubmit="return false;">
+                            <div class="user">
+                                <input type="text" class="text" id="username" placeholder="用户名">
                             </div>
-                        </div>
-                        <input type="button" value="注册音平账号" id="submit" class="zhuce">
+
+                            <div class="pass">
+                                <input type="password" class="password" id="password" placeholder="密码">
+                            </div>
+
+
+                            <div class="forget clearfix">
+                                <a href="#">忘记密码?</a>
+                            </div>
+                            <input type="submit" name="submit" value="立即登录" id="submit" class="denglu buttons">
+                            <div class="login-foot">
+                                <div class="f-main">
+                                    <dl>
+                                        <dt>合作伙伴账号登录：</dt>
+                                        <dd><a href="#" class="weixin"></a></dd>
+                                        <dd><a href="#" class="zfb"></a></dd>
+                                        <dd><a href="#" class="qq"></a></dd>
+                                        <dd><a href="#" class="weibo"></a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <a href="registor.html" class="zhuce buttons">注册音平账号</a>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- 导入底部 -->
         <div class="login-reg-f"></div>
     </div>
     <script src="script/thirdplugins/jquery.js"></script>
-	<script src="script/js/login.js"></script>
+    <script src="script/thirdplugins/jquery.cookie.js"></script>
+    <script src="script/js/login.js"></script>
 
 </body>
 

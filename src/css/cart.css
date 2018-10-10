@@ -596,6 +596,7 @@
 }
 
 .m_nocart {
+  display: none;
   position: relative;
   height: 218px;
   background: url(https://static.ingping.com/yp/images/cart/cartIcon-1.0.0.png) 336px 91px no-repeat;
@@ -611,6 +612,13 @@
 }
 .m_nocart_wrap a {
   color: #38d;
+}
+
+.cart_content .head {
+  color: #999;
+  border: 1px solid #eaeaea;
+  height: 34px;
+  line-height: 34px;
 }
 
 .m_mycart {

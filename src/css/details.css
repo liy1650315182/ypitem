@@ -529,12 +529,9 @@ h2 a:hover {
   height: 39px;
 }
 .nav_right_2 ul {
-  height: 195px;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 0px;
-  margin: 0px;
 }
 .nav_right_2 li {
   height: 39px;
@@ -1247,6 +1244,7 @@ h2 a:hover {
   width: 100%;
   background-image: url(https://static.ingping.com/yp/images/main_bg-1.0.0.png);
   background-repeat: repeat-x;
+  margin-bottom: 30px;
 }
 
 .d_index {
@@ -1301,6 +1299,8 @@ h2 a:hover {
   position: absolute;
   left: 0px;
   top: 0px;
+  width: 800px;
+  height: 800px;
 }
 
 #fdj_list {
@@ -1339,9 +1339,6 @@ h2 a:hover {
   height: 60px;
   border: 2px solid transparent;
 }
-#list ul img:hover {
-  border: 2px solid #f60;
-}
 
 #fdj_list a {
   display: block;
@@ -1373,6 +1370,10 @@ h2 a:hover {
   width: 100%;
 }
 
+.share_box {
+  position: relative;
+}
+
 .share {
   float: right;
   color: #333;
@@ -1386,6 +1387,19 @@ h2 a:hover {
 .share i,
 .collect i {
   color: #f60;
+}
+
+.share_other {
+  display: none;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+}
+.share_other img {
+  margin-left: 5px;
 }
 
 .collect {
@@ -1526,28 +1540,6 @@ h2 a:hover {
   padding: 0 4px;
   color: #fff;
   background-color: #ff6600;
-}
-
-.gift-details {
-  float: left;
-}
-
-.gift-item {
-  width: 56px;
-  float: left;
-  height: 30px;
-}
-.gift-item a {
-  float: left;
-  margin-right: 3px;
-}
-.gift-item a img {
-  display: block;
-}
-.gift-item em {
-  font-size: 12px;
-  font-family: arial;
-  color: #ff6600;
 }
 
 .gift-a {
@@ -1737,8 +1729,15 @@ h2 a:hover {
   position: relative;
   height: 400px;
 }
+.tab-content ul {
+  width: 600px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
 .tab-content li {
   width: 150px;
+  float: left;
 }
 .tab-content a {
   display: block;

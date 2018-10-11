@@ -18,6 +18,7 @@
     width: 100%;
     background-image: url(https://static.ingping.com/yp/images/main_bg-1.0.0.png);
     background-repeat: repeat-x;
+    margin-bottom: 30px;
 }
 
 .d_index {
@@ -72,7 +73,8 @@
     position: absolute;
     left: 0px;
     top: 0px;
-
+    width: 800px;
+    height: 800px;
 }
 #fdj_list {
     width: 100%;
@@ -111,10 +113,6 @@
         width: 60px;
         height: 60px;
         border: 2px solid transparent;
-
-        &:hover {
-            border: 2px solid #f60;
-        }
     }
 }
 
@@ -148,6 +146,9 @@
     margin-top: 10px;
     width: 100%;
 }
+.share_box{
+    position: relative;
+}
 .share {
     float: right;
     color: #333;
@@ -161,6 +162,18 @@
 .collect {
     i {
         color: #f60;
+    }
+}
+.share_other{
+    display: none;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border: 1px solid #ddd;
+    padding: 5px 0;
+    img{
+        margin-left:5px;
     }
 }
 .collect {
@@ -211,7 +224,7 @@
     line-height: 30px;
 }
 
-//价格 优惠 促销 配送
+//价格 优惠 配送
 .cmr {
     float: left;
     color: #999;
@@ -281,7 +294,7 @@
     width: 100%;
     padding-top: 4px;
 }
-//赠品 满减 立减
+//满减 立减
 .gift {
     float: right;
     width: 480px;
@@ -294,26 +307,6 @@
             color: #fff;
             background-color: #ff6600;
         }
-    }
-}
-.gift-details {
-    float: left;
-}
-.gift-item {
-    width: 56px;
-    float: left;
-    height: 30px;
-    a {
-        float: left;
-        margin-right: 3px;
-        img {
-            display: block;
-        }
-    }
-    em {
-        font-size: 12px;
-        font-family: arial;
-        color: #ff6600;
     }
 }
 //满减立减的链接
@@ -498,8 +491,15 @@
     overflow: hidden;
     position: relative;
     height: 400px;
+    ul{
+        width: 600px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+    }
     li {
         width: 150px;
+        float: left;
     }
     a {
         display: block;

@@ -6,24 +6,64 @@
     //banner轮播图/tab切换
     //banner轮播图
     var $btnspan = $('.lunbo_main ol span');
+    var $lunbo = $('.lunbo_img');
+    var $prevBtn = $('.prevbtn');
+    var $nextBtn = $('.nextbtn');
+
+    var $index = 0;
     $btnspan.on('click', function () {
-        $(this).addClass('on').siblings('span').removeClass('on');
-        console.log($(this));
-        $('.lunbo_img').children('li').eq($(this).index()).animate({
-            opacity: 1
-        }, 400).siblings($('.lunbo_img').children('li')).animate({
-            opacity: 0
-        }, 400)
+        clearInterval($timer);
+        $index = $(this).index();
+        imgchange($index);
     });
-    timer = setInterval(function () {
-        $(this).addClass('on').siblings('span').removeClass('on');
-        console.log($(this));
-        $('.lunbo_img').children('li').eq($(this).index()).animate({
+
+    $nextBtn.on('click', function () {
+        clearInterval($timer);
+        $index++;
+        if ($index > 6) {
+            $index = 0;
+        }
+        imgchange($index);
+    });
+
+    $prevBtn.on('click', function () {
+        clearInterval($timer);
+        $index--;
+        if ($index < 0) {
+            $index = 6;
+        }
+        imgchange($index);
+    });
+
+    var $timer = setInterval(function () {
+        $index++;
+        if ($index > 6) {
+            $index = 0;
+        }
+        imgchange($index);
+    }, 2000);
+
+    $lunbo.on('mouseover', function () {
+        clearInterval($timer);
+    });
+    $lunbo.on('mouseout', function () {
+        $timer = setInterval(function () {
+            $index++;
+            if ($index > 6) {
+                $index = 0;
+            }
+            imgchange($index);
+        }, 2000)
+    });
+
+    function imgchange($index) {
+        $btnspan.eq($index).addClass('on').siblings('span').removeClass('on');
+        $('.lunbo_img').children('li').eq($index).stop(true).animate({
             opacity: 1
         }, 400).siblings($('.lunbo_img').children('li')).animate({
             opacity: 0
         }, 400)
-    }, 2000);
+    }
 
 
     //tab切换
@@ -249,17 +289,17 @@
         function midpic(value) {
             var str = '';
             str += `
-            <a href="#" class="record-mid-img hover_move">						
+            <a href="http://10.31.162.37/js/ypitem/src/details.html?sid=${value.sid}" class="record-mid-img hover_move">						
             <div class="mid-left-l all_left_div">
-            <p class="c-999">${value.title_top}</p>
-            <p class="f-18">${value.title_bot}</p>
+            <p class="c-999">${value.title.split(',')[0]}</p>
+            <p class="f-18">${value.title.split(',')[1]}</p>
             <p class="goods-price">
                 <span class="price">
                     <i>￥</i>${value.price}
                 </span>
             </p>
         </div>
-        <img src="${value.url}" alt="" class="left-imgs">
+        <img src="${value.url.split(',')[0]}" alt="" class="left-imgs">
         </a> `;
             return str;
         }
@@ -284,14 +324,14 @@
                 $str5 += midpic(value);
                 $oMiddle_pic.eq(4).html($str5);
             }
-            if (value.sid >= 11) {
+            if (value.sid >= 11 && value.sid < 13) {
                 $str6 += midpic(value);
                 $oMiddle_pic.eq(5).html($str6);
             }
 
         });
     });
-    //商品大图数据渲染
+    //商品小图数据渲染
     $.ajax({
         type: 'post',
         url: 'http://10.31.162.37/js/ypitem/php/right_pic.php',
@@ -309,42 +349,42 @@
         function midpic(value) {
             var str = '';
             str += `
-            <a href="#" class="record-right-img hover_move">
+            <a href="http://10.31.162.37/js/ypitem/src/details.html?sid=${value.sid}" class="record-right-img hover_move">
                 <div class="all_left_div" style="z-index:2;">
-                    <p class="c-999">${value.title_top}</p>
-                    <p class="f-18">${value.title_bot}</p>
+                    <p class="c-999">${value.title.split(',')[0]}</p>
+                    <p class="f-18">${value.title.split(',')[1]}</p>
                     <p class="goods-price">
                         <span class="price">
                             <i>￥</i>${value.price}
                         </span>
                     </p>
                 </div>
-                <img src="${value.url}" alt="" class="left-imgs">
+                <img src="${value.url.split(',')[0]}" alt="" class="left-imgs">
             </a>`;
             return str;
         }
         $.each(data, function (index, value) {
-            if (value.sid >= 1 && value.sid < 5) {
+            if (value.sid >= 13 && value.sid < 17) {
                 $str1 += midpic(value);
                 $oRight_pic.eq(0).html($str1);
             }
-            if (value.sid >= 5 && value.sid < 9) {
+            if (value.sid >= 17 && value.sid < 21) {
                 $str2 += midpic(value);
                 $oRight_pic.eq(1).html($str2);
             }
-            if (value.sid >= 9 && value.sid < 13) {
+            if (value.sid >= 21 && value.sid < 25) {
                 $str3 += midpic(value);
                 $oRight_pic.eq(2).html($str3);
             }
-            if (value.sid >= 13 && value.sid < 17) {
+            if (value.sid >= 25 && value.sid < 29) {
                 $str4 += midpic(value);
                 $oRight_pic.eq(3).html($str4);
             }
-            if (value.sid >= 17 && value.sid < 21) {
+            if (value.sid >= 29 && value.sid < 33) {
                 $str5 += midpic(value);
                 $oRight_pic.eq(4).html($str5);
             }
-            if (value.sid >= 21) {
+            if (value.sid >= 33) {
                 $str6 += midpic(value);
                 $oRight_pic.eq(5).html($str6);
             }

@@ -614,13 +614,6 @@
   color: #38d;
 }
 
-.cart_content .head {
-  color: #999;
-  border: 1px solid #eaeaea;
-  height: 34px;
-  line-height: 34px;
-}
-
 .m_mycart {
   font-size: 16px;
   font-weight: bold;
@@ -629,9 +622,175 @@
   margin-top: 15px;
 }
 
-.tip {
+input {
+  vertical-align: middle;
+}
+
+.cart_content .head {
+  border: 1px solid #eaeaea;
+  height: 34px;
+  line-height: 34px;
+}
+
+.col {
+  color: #999;
+  float: left;
+  padding: 0 10px;
+}
+
+.col1 {
+  width: 114px;
+}
+
+.cart_box .u-chk {
+  margin: -6px 10px 0 12px;
+  background-position: 0 0;
+}
+
+.u-chk {
+  width: 17px;
+  height: 18px;
+  background-image: url(https://static.ingping.com/yp/images/cart/checkboxIcons-1.0.1.png);
+  background-repeat: no-repeat;
+  background-position: 0 -24px;
+}
+
+.lab {
+  color: #000;
+}
+
+.col2 {
+  width: 396px;
+}
+
+.col3 {
+  width: 142px;
+}
+
+.col4 {
+  width: 120px;
+}
+
+.col5 {
+  width: 105px;
+}
+
+.col6 {
+  width: 110px;
+  padding: 0 7px;
+  text-align: left;
+}
+
+.cart_box_main {
+  margin-top: 10px;
+  border: 1px solid #eaeaea;
+}
+.cart_box_main li {
+  background-color: #FFFBF0;
+  border-bottom: 1px solid #eaeaea;
+  display: table;
+  padding: 20px 0;
   position: relative;
-  float: right;
+}
+.cart_box_main .col {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+.cart_box_main .col0 {
+  padding-right: 0;
+}
+.cart_box_main .col1 {
+  padding: 0 10px 0 0;
+  width: 460px;
+}
+.cart_box_main .col2 {
+  width: 112px;
+}
+.cart_box_main .col3 {
+  width: 152px;
+}
+
+.imgwrap {
+  width: 80px;
+  float: left;
+}
+.imgwrap img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #eaeaea;
+}
+
+.txtwrap {
+  margin-left: 20px;
+  width: 345px;
+  float: left;
+}
+
+.goodtlt {
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.goodtlt a {
+  font-size: 14px;
+  display: block;
+}
+.goodtlt a:hover {
+  color: #333;
+}
+
+.newprice {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.goods_count {
+  display: inline-block;
+  background-color: #fff;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.minus {
+  cursor: not-allowed;
+  color: #bcbcbc;
+  border-color: #bcbcbc;
+}
+
+.goods_num {
+  float: left;
+  width: 43px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: #bcbcbc 1px solid;
+  border-width: 1px 0;
+}
+
+.plus {
+  float: left;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #bcbcbc;
+  color: #333;
+}
+
+.sum_price {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cart_del {
+  display: block;
+  color: #333;
+  cursor: pointer;
+  line-height: 25px;
+  height: 25px;
 }
 
 .m_shengqian {

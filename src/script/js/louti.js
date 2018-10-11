@@ -8,7 +8,7 @@
     $louti.hide();
     $(window).on('scroll', function () {
         var $scrolltop = $(window).scrollTop(); //滚动条的top值。
-        if ($scrolltop >= 400) {
+        if ($scrolltop >= 1100) {
             $louti.show();
         } else {
             $louti.hide();

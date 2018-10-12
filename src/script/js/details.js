@@ -61,25 +61,12 @@
 		$('#spic').find('img').attr('src', url);
 		$('#bpic').attr('src', url);
 		$(this).find('img').css('border', '2px solid #f60');
-		if(url==''){
+		if (url == '') {
 			$(this).find('img').css('border', '0');
 		}
 	}, function () {
 		$(this).find('img').css('border', '0');
 	});
-
-
-	/* var $num = $li.eq($(this).index);
-	$rightBtn.on('click', function () {
-		$num++;
-		if ($num < 4) {
-			var url =  $li.eq($num).find('img').attr('src'); //当前点击的li下面的图片路径
-			$('#spic').find('img').attr('src', url);
-			$('#bpic').attr('src', url);
-			$li.eq($num).find('img').css('border', '2px solid #f60');
-		}
-	}); */
-
 
 	//分享
 	var $shareBtn = $('.share');
@@ -101,24 +88,37 @@
 
 
 	//无缝滚动
-	var $oUl=$('.tab-content ul');
-	var $aLi=$('.tab-content ul li');
-    var $btnspan = $('.tab-content ol span');
-
+	var $oUl = $('.tab-content ul');
+	var $aLi = $('.tab-content ul li');
+	var $btnspan = $('.tab-content ol span');
+	var $liwidth = $aLi.eq(0).innerWidth();
 	var $index = 0;
-    $btnspan.on('click', function () {
-        $index = $(this).index();
-        imgchange($index);
-    });
+	$btnspan.on('click', function () {
+		clearInterval($timer);
+		$index = $(this).index();
+		$btnspan.eq($index).addClass('active').siblings('span').removeClass('active');
+		$oUl.css({
+			left: -$index * $liwidth
+		})
+	});
+	var $timer = setInterval(function () {
+		$index++;
+		$btnspan.eq($index).addClass('active').siblings('span').removeClass('active');
+		$oUl.animate({
+			left: -$index * $liwidth
+		}, 500, function () {
+			if ($index == $aLi.size() - 1) {
+				$index = 0;
+				$btnspan.eq($index).addClass('active').siblings('span').removeClass('active');
+				$oUl.css({
+					left: 0
+				});
+			}
+		})
 
-	function imgchange($index) {
-        $btnspan.eq($index).addClass('active').siblings('span').removeClass('active');
-        $aLi.eq($index).animate({
-            left: -150
-        }, 400).siblings($aLi).animate({
-            left: -150
-        }, 400)
-    }
+	}, 3000);
+
+
 }(jQuery);
 
 

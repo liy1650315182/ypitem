@@ -18,15 +18,38 @@
     var $small_lunbo=$('.nav_right_2 ul');
     var $prevbtn=$('.top_bot .prev');
     var $nextbtn=$('.top_bot .next');
-    $prevbtn.on('click',function () {
-        $small_lunbo.animate({
-            top:-39
+    var $num=0;
+
+    var $timer=setInterval(function () { 
+        $prevbtn.click();
+     },2000)
+     $nextbtn.on('click',function () { 
+         clearInterval($timer);
+         $num+=39;
+         $small_lunbo.animate({
+            top:$num+'px'
+        },500,function(){
+            if($num>0){
+                $num=-195;
+                $small_lunbo.css({
+                    'top':'-156px'
+                })
+            }
         });
-     });
-     $nextbtn.on('click',function () {
+      });
+      $prevbtn.on('click',function () { 
+        $num+=-39;
         $small_lunbo.animate({
-            top:39
-        });
-     });
+           top:$num+'px'
+       },500,function(){
+           if($num==-195){
+               $num=0;
+               $small_lunbo.css({
+                   'top':'0px'
+               })
+           }
+       });
+     })
+
     
 }(jQuery);

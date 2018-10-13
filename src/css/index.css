@@ -248,6 +248,20 @@
   color: #999;
   outline: none;
 }
+.searchbox ul {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  width: 460px;
+  line-height: 30px;
+  padding-left: 10px;
+  left: -2px;
+  top: 32px;
+  z-index: 99999;
+}
+.searchbox li {
+  font-size: 14px;
+}
 
 .search-btn {
   width: 90px;
@@ -800,6 +814,33 @@ h2 a:hover {
   background-position: 0 -253px;
 }
 
+.side_link3, .side_link4, .top_links {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  left: -121px;
+  height: 42px;
+  line-height: 42px;
+  width: 92px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: #444851;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+.right_black {
+  position: absolute;
+  right: -5px;
+  top: 15px;
+  width: 5px;
+  height: 9px;
+  background-position: 0 -234px;
+}
+
 .my_link_box {
   overflow: hidden;
   height: 120px;
@@ -967,7 +1008,7 @@ h2 a:hover {
 
 #shopcart a {
   line-height: 16px;
-  height: 100px;
+  height: 130px;
   margin: 20px 0 10px;
 }
 

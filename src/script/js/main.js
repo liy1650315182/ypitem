@@ -1,0 +1,1 @@
+require(['cart','details','index','login','louti','sidebar'])

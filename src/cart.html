@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/other.css">
 
 </head>
+<script src="script/js/require.js" type="text/javascript" defer async="true" data-main="script/js/main.js"></script>
 
 <body>
     <!-- header中部左右导航 -->
@@ -34,12 +35,19 @@
             </div>
         </div>
 
+        <!-- 购物车空空如也 -->
+        <div class="m_nocart">
+            <div class="m_nocart_wrap">
+                <p>购物车里空空如也，赶紧去&nbsp;<a href="http://10.31.162.37/js/ypitem/src/index.html">逛逛吧&gt;</a></p>
+                <p>或者您可以先进行&nbsp;<a href="login.html">登录&gt;</a></p>
+            </div>
+        </div>
+
         <!-- 购物车不空的时候 -->
         <div class="cart_content">
             <!-- 全部商品 -->
             <h3 class="m_mycart">
-                全部商品&ensp;
-                <span class="shopping_amount">3</span>
+                全部商品信息
             </h3>
             <!-- 商品内容 -->
             <div class="cart_box">
@@ -56,17 +64,18 @@
                 </div>
                 <div class="cart_box_main">
                     <ul>
-                        <li>
+                        <!-- 写入的结构隐藏 -->
+                        <li style="display:none" class="goods-item">
                             <div class="col col0">
                                 <input type="checkbox" class="u-chk" name="selectGood" checked style="outline:none;">
                             </div>
                             <div class="col col1">
                                 <a href="#" id="4887" class="imgwrap">
-                                    <img src="https://img.ingping.com/images/product/M/201412/201412081701240434931.jpg">
+                                    <img src="" sid="">
                                 </a>
                                 <div class="txtwrap">
                                     <h3 class="goodtlt">
-                                        <a href="#" id="4887"> MKS4 麦克风防震架 MK4 MK8专用防震架 </a>
+                                        <a href=""> MKS4 麦克风防震架 MK4 MK8专用防震架 </a>
                                     </h3>
                                 </div>
                             </div>
@@ -84,14 +93,53 @@
                             <div class="col col5">
                                 <span class="sum_price" style="color:#f40">¥ 1019.00</span>
                             </div>
-                            <div class="col col6"> 
+                            <div class="col col6">
                                 <span class="cart_del">移入我的收藏</span>
                                 <a class="cart_del deleteGoods" href="javascript:void(0)">删除</a>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <!-- 总价格 -->
+                <div id="all_goods_price">
+                    <div class="select_all">
+                        <input type="checkbox" class="u-chk" name="selectAll" checked="" style="outline:none;">
+                        <label class="lab">全选</label>
+                        <span class="cart_delete_all">
+                            <img src="https://static.ingping.com/yp/images/cart/ico_trash-1.0.0.png" alt="">
+                            <a href="Javascript:;">删除选中商品</a>
+                        </span>
+                        <span class="cart_delete_all">
+                            已选商品<em class="all_num">0</em>件
+                        </span>
+                    </div>
+                    <div class="price_all_goods">
+                        <p class="price_all jianhao">
+                            <span>商品金额总计</span>
+                            <br>
+                            <span class="fs-13">
+                                ￥<em class="goodsprice">0.00</em>
+                            </span>
+                        </p>
+                        <p class="price_all denghao">
+                            <span>优惠金额</span>
+                            <br>
+                            <span class="youhui">
+                                ￥<em class="goodsprice">0.00</em>
+                            </span>
+                        </p>
+                        <p class="price_all">
+                            <span>订单金额(不含运费)</span>
+                            <br>
+                            <span class="allneed">
+                                ￥<em class="goodsprice">0.00</em>
+                            </span>
+                        </p>
+                        <a href="Javascript:;" class="gobuy">去结算</a>
+                    </div>
+                </div>
             </div>
+
 
             <!-- 省钱小提示 -->
             <div class="m_shengqian">
@@ -102,13 +150,7 @@
                 <span class="ml-20">4、评论可获取积分</span>
             </div>
         </div>
-        <!-- 购物车空空如也 -->
-        <div class="m_nocart">
-            <div class="m_nocart_wrap">
-                <p>购物车里空空如也，赶紧去&nbsp;<a href="http://10.31.162.37/js/ypitem/src/home.html">逛逛吧&gt;</a></p>
-                <p>或者您可以先进行&nbsp;<a href="login.html">登录&gt;</a></p>
-            </div>
-        </div>
+
 
 
         <!-- 关于购物车 -->
@@ -139,8 +181,8 @@
     <!-- 最底部 -->
     <div class="cart_f"></div>
 
-    <script src="script/thirdplugins/jquery.js"></script>
-    <script src="script/js/cart.js"></script>
+    <!-- <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/cart.js"></script> -->
 </body>
 
 </html>

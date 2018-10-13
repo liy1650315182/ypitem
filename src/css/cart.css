@@ -112,6 +112,33 @@
   background-position: 0 -253px;
 }
 
+.side_link3, .side_link4, .top_links {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  left: -121px;
+  height: 42px;
+  line-height: 42px;
+  width: 92px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: #444851;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+.right_black {
+  position: absolute;
+  right: -5px;
+  top: 15px;
+  width: 5px;
+  height: 9px;
+  background-position: 0 -234px;
+}
+
 .my_link_box {
   overflow: hidden;
   height: 120px;
@@ -279,7 +306,7 @@
 
 #shopcart a {
   line-height: 16px;
-  height: 100px;
+  height: 130px;
   margin: 20px 0 10px;
 }
 
@@ -352,7 +379,6 @@
   width: 990px;
   margin: 0 auto;
   padding-top: 10px;
-  height: 1000px;
   position: relative;
 }
 
@@ -400,7 +426,6 @@
 }
 
 .m_nocart {
-  display: none;
   position: relative;
   height: 218px;
   background: url(https://static.ingping.com/yp/images/cart/cartIcon-1.0.0.png) 336px 91px no-repeat;
@@ -446,7 +471,7 @@ input {
   width: 114px;
 }
 
-.cart_box .u-chk {
+.u-chk {
   margin: -6px 10px 0 12px;
   background-position: 0 0;
 }
@@ -485,13 +510,10 @@ input {
   text-align: left;
 }
 
-.cart_box_main {
-  margin-top: 10px;
-  border: 1px solid #eaeaea;
-}
 .cart_box_main li {
+  margin-top: 10px;
   background-color: #FFFBF0;
-  border-bottom: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
   display: table;
   padding: 20px 0;
   position: relative;
@@ -597,6 +619,105 @@ input {
   height: 25px;
 }
 
+#all_goods_price {
+  height: 78px;
+  width: 100%;
+  margin: 15px 0;
+  position: relative;
+  border: 1px solid #eaeaea;
+  background-color: #F8F8F8;
+}
+
+.select_all {
+  padding-left: 10px;
+  float: left;
+  width: 300px;
+  height: 78px;
+  line-height: 78px;
+  vertical-align: middle;
+}
+
+.cart_delete_all {
+  margin-left: 10px;
+}
+.cart_delete_all img {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+.all_num {
+  color: #e50007;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.price_all_goods {
+  float: right;
+  padding-right: 120px;
+}
+
+.price_all {
+  float: left;
+  position: relative;
+  width: 145px;
+  line-height: 23px;
+  padding: 15px 0;
+  text-align: center;
+  border-right: 1px solid #eaeaea;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.youhui {
+  color: #e50007;
+  font-size: 16px;
+}
+
+.allneed {
+  color: #e50007;
+  font-size: 18px;
+}
+
+.jianhao::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 5px;
+  z-index: 100;
+  background: url(https://static.ingping.com/yp/images/cart/subtract-1.0.0.jpg) no-repeat center center;
+  width: 70px;
+  height: 70px;
+}
+
+.denghao::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  top: 5px;
+  z-index: 100;
+  background: url(https://static.ingping.com/yp/images/cart/equal-1.0.0.jpg) no-repeat center center;
+  width: 70px;
+  height: 70px;
+}
+
+.gobuy {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  bottom: 0;
+  width: 120px;
+  line-height: 76px;
+  text-align: center;
+  background-color: #e50007;
+  color: #fff;
+  font-size: 18px;
+}
+.gobuy:hover {
+  color: #fff;
+}
+
 .m_shengqian {
   position: relative;
   margin: 15px 0;
@@ -614,13 +735,10 @@ input {
 
 .cart_about {
   width: 990px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   border: solid 1px #eee;
   border-top: solid 2px #999999;
   padding: 15px 20px;
-  margin-bottom: 15px;
+  margin: 50px 0 15px;
 }
 
 .cart_about_title {

@@ -101,7 +101,7 @@
     left: 5px;
 }
 
-//划过侧边栏时的显示和隐藏
+
 .link_nav {
     position: relative;
 }
@@ -124,6 +124,31 @@
     width: 5px;
     height: 9px;
     background-position: 0 -253px;
+}
+//我的资产 投诉建议 回到顶部
+.side_link3,.side_link4,.top_links{
+    position: relative;
+}
+.tooltip{
+    visibility: hidden; 
+    left: -121px;
+    height: 42px;
+    line-height: 42px;
+    width: 92px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background: #444851;
+    color: #d8d8d8;
+    text-align: center;
+}
+.right_black{
+    position: absolute;
+    right: -5px;
+    top: 15px;
+    width: 5px;
+    height: 9px;
+    background-position: 0 -234px;
 }
 
 //个人中心显示和隐藏
@@ -313,7 +338,7 @@
 
 #shopcart a {
     line-height: 16px;
-    height: 100px;
+    height: 130px;
     margin: 20px 0 10px;
 }
 

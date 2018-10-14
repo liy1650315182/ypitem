@@ -593,6 +593,7 @@ input {
   text-align: center;
   border: #bcbcbc 1px solid;
   border-width: 1px 0;
+  outline: none;
 }
 
 .plus {

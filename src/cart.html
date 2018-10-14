@@ -53,8 +53,8 @@
             <div class="cart_box">
                 <div class="head f-cb">
                     <div class="col col1">
-                        <input type="checkbox" class="u-chk" name="selectAll" checked="" style="outline:none;">
-                        <label class="lab">全选</label>
+                        <input type="checkbox" class="u-chk-all u-chk" id="selectAll" checked="" style="outline:none;">
+                        <label class="lab" for="selectAll">全选</label>
                     </div>
                     <div class="col col2">商品信息</div>
                     <div class="col col3">单价(元)</div>
@@ -79,10 +79,12 @@
                                     </h3>
                                 </div>
                             </div>
+                            <!-- 单价 -->
                             <div class="col col2">
-                                <span class="newprice">¥1019.00
+                                <span class="newprice">¥ <em>1019.00</em>
                                 </span>
                             </div>
+                            <!-- 数量 -->
                             <div class="col col3">
                                 <span class="goods_count">
                                     <span id="num_min" class="minus plus">-</span>
@@ -90,8 +92,9 @@
                                     <span id="num_add" class="plus">+</span>
                                 </span>
                             </div>
+                            <!-- 总价 -->
                             <div class="col col5">
-                                <span class="sum_price" style="color:#f40">¥ 1019.00</span>
+                                <span class="sum_price" style="color:#f40">¥ <em>1019.00</em> </span>
                             </div>
                             <div class="col col6">
                                 <span class="cart_del">移入我的收藏</span>
@@ -100,11 +103,12 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- 总价格 -->
                 <div id="all_goods_price">
                     <div class="select_all">
-                        <input type="checkbox" class="u-chk" name="selectAll" checked="" style="outline:none;">
-                        <label class="lab">全选</label>
+                        <input type="checkbox" class="u-chk-all u-chk" id="selectAll" checked style="outline:none;">
+                        <label class="lab" for="selectAll">全选</label>
                         <span class="cart_delete_all">
                             <img src="https://static.ingping.com/yp/images/cart/ico_trash-1.0.0.png" alt="">
                             <a href="Javascript:;">删除选中商品</a>
@@ -117,7 +121,7 @@
                         <p class="price_all jianhao">
                             <span>商品金额总计</span>
                             <br>
-                            <span class="fs-13">
+                            <span class="fs-13 totalprice">
                                 ￥<em class="goodsprice">0.00</em>
                             </span>
                         </p>
@@ -125,7 +129,7 @@
                             <span>优惠金额</span>
                             <br>
                             <span class="youhui">
-                                ￥<em class="goodsprice">0.00</em>
+                                ￥<em class="goodsprice">299.00</em>
                             </span>
                         </p>
                         <p class="price_all">
@@ -150,6 +154,7 @@
                 <span class="ml-20">4、评论可获取积分</span>
             </div>
         </div>
+
 
 
 
@@ -180,9 +185,6 @@
 
     <!-- 最底部 -->
     <div class="cart_f"></div>
-
-    <!-- <script src="script/thirdplugins/jquery.js"></script>
-    <script src="script/js/cart.js"></script> -->
 </body>
 
 </html>

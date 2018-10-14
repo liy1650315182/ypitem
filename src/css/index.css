@@ -236,7 +236,7 @@
   position: relative;
   background: #fff;
 }
-.searchbox .search-keyword {
+.searchbox input {
   width: 458px;
   height: 32px;
   margin-top: 0;
@@ -251,6 +251,8 @@
 .searchbox ul {
   background: #fff;
   border: 1px solid #eaeaea;
+  border-top-color: #f60;
+  border-top-width: 2px;
   position: absolute;
   width: 460px;
   line-height: 30px;
@@ -261,6 +263,9 @@
 }
 .searchbox li {
   font-size: 14px;
+}
+.searchbox li a {
+  display: block;
 }
 
 .search-btn {
@@ -274,6 +279,7 @@
   letter-spacing: 1px;
   font-size: 16px;
   color: #fff;
+  outline: none;
 }
 
 .navbox {
@@ -332,11 +338,11 @@
   height: 40px;
   background: #ff6600;
   float: left;
-  z-index: 99999;
+  z-index: 9999;
   position: relative;
 }
 .allbtn ul {
-  z-index: 99999;
+  z-index: 9999;
   position: absolute;
   background-color: rgba(50, 50, 50, 0.9);
   width: 210px;

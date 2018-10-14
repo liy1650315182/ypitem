@@ -1,5 +1,286 @@
 define(['jquery'], function ($) {
     return {
+
+        //楼梯
+        louti: ! function () {
+            $(document).ready(function () {
+                //滚轮事件显示左侧的楼梯。
+                var $louti = $('#nav_panel'); //左侧楼梯
+                var $loutili = $('#nav_panel li');
+                var $louceng = $('#main .louti');
+                var $backtop = $('#nav_panel .toTop');
+                var $record = $('#main .record');
+                $louti.hide();
+                $(window).on('scroll', function () {
+                    var $scrolltop = $(window).scrollTop(); //滚动条的top值。
+                    if ($scrolltop >= 1300) {
+                        $louti.show();
+                    } else {
+                        $louti.hide();
+                    }
+                    $louceng.each(function (index) {
+                        var $top = $louceng.eq(index).offset().top + $(this).innerHeight() / 2 - 200;
+                        if ($top > $scrolltop) {
+                            $loutili.removeClass('current');
+                            $loutili.eq(index).addClass('current');
+                            return false;
+                        }
+                    });
+                });
+
+                $loutili.on('click', function () {
+                    $(this).addClass('current').siblings('li').removeClass('current');
+                    var $top = $louceng.eq($(this).index() - 1).offset().top;
+                    $('html,body').animate({
+                        scrollTop: $top
+                    });
+                });
+
+                $backtop.on('click', function () {
+                    $('html,body').scrollTop(0);
+                });
+            })
+        }(),
+
+        //侧边栏
+        sidebar: ! function () {
+
+            $(document).ready(function () {
+                //side_link1
+                $('.side_link1').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.my_link').css('background-position', '-33px 0')
+                    var $hover_subnav_all_main = $(this).find('.link_main');
+                    $hover_subnav_all_main.css('display', 'block');
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.my_link').css('background-position', '0 0')
+                    var $hover_subnav_all_main = $(this).find('.link_main');
+                    $hover_subnav_all_main.css('display', 'none');
+                });
+                //side_link2
+                $('.side_link2').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.tel_link').css('background-position', '-33px -175px')
+                    var $hover_subnav_all_main = $(this).find('.link_main');
+                    $hover_subnav_all_main.css('display', 'block');
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.tel_link').css('background-position', '0 -175px')
+                    var $hover_subnav_all_main = $(this).find('.link_main');
+                    $hover_subnav_all_main.css('display', 'none');
+                });
+                //shopcart
+                $('#shopcart .icon_links').hover(function () {
+                    $(this).css({
+                        'background': '#f60',
+                        'color': '#fff'
+                    });
+                    $('.cart_link').css('background-position', '-33px -29px')
+                }, function () {
+                    $(this).css({
+                        'background': '#333',
+                        'color': '#f60'
+                    });
+                    $('.cart_link').css('background-position', '0 -29px')
+                });
+                //top_code
+                $('.top_code').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.topli_code').css('background-position', '0 -321px')
+                    var $hover_subnav_all_main = $(this).find('.topli_link_main');
+                    $hover_subnav_all_main.css('display', 'block');
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.topli_code').css('background-position', '0 -302px')
+                    var $hover_subnav_all_main = $(this).find('.topli_link_main');
+                    $hover_subnav_all_main.css('display', 'none');
+                });
+                //side_link3
+                $('.side_link3').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.money_link').css('background-position', '-33px -57px');
+                    $('.side_link3 .tooltip').css('visibility', 'visible');
+                    $('.side_link3 .tooltip').animate({
+                        'left': '-92px'
+                    })
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.money_link').css('background-position', '0 -57px');
+                    $('.side_link3 .tooltip').css('visibility', 'hidden');
+                    $('.side_link3 .tooltip').animate({
+                        'left': '-121px'
+                    })
+                });
+                //side_link4
+                $('.side_link4').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.pen_link1').css('display', 'none');
+                    $('.pen_link2').css('display', 'block');
+                    $('.side_link4 .tooltip').css('visibility', 'visible');
+                    $('.side_link4 .tooltip').animate({
+                        'left': '-92px'
+                    })
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.pen_link1').css('display', 'block');
+                    $('.pen_link2').css('display', 'none');
+                    $('.side_link4 .tooltip').css('visibility', 'hidden');
+                    $('.side_link4 .tooltip').animate({
+                        'left': '-121px'
+                    })
+                });
+
+                //回到顶部
+                $topback = $('.top .topback');
+                $topback.hide();
+                $(window).on('scroll', function () {
+                    var $scrolltop = $(window).scrollTop(); //滚动条的top值。
+                    if ($scrolltop >= 100) {
+                        $topback.show();
+                    } else {
+                        $topback.hide();
+                    }
+                });
+                $('.top_links').hover(function () {
+                    $(this).css('background', '#f60');
+                    $('.topback').css('background-position', '-33px -201px');
+                    $('.top_links .tooltip').css('visibility', 'visible');
+                    $('.top_links .tooltip').animate({
+                        'left': '-92px'
+                    })
+                }, function () {
+                    $(this).css('background', '#333');
+                    $('.topback').css('background-position', '0 -201px');
+                    $('.top_links .tooltip').css('visibility', 'hidden');
+                    $('.top_links .tooltip').animate({
+                        'left': '-121px'
+                    })
+                });
+            })
+
+        }(),
+
+        header: ! function () {
+
+            $(document).ready(function () {
+                //header
+                //我的音平
+                //客服服务
+                //手机音平
+                //全部商品分类
+                //总导航
+                $('.hover_subnav_all').hover(function () {
+                    var $hover_subnav_all_main = $(this).find('.hover_subnav_all_main');
+                    $hover_subnav_all_main.css('display', 'block');
+                }, function () {
+                    var $hover_subnav_all_main = $(this).find('.hover_subnav_all_main');
+                    $hover_subnav_all_main.css('display', 'none');
+                });
+                //上下切换的轮播图
+                var $small_lunbo = $('.nav_right_2 ul');
+                var $prevbtn = $('.top_bot .prev');
+                var $nextbtn = $('.top_bot .next');
+                var $num = 0;
+
+                var $timer = setInterval(function () {
+                    $prevbtn.click();
+                }, 2000)
+                $nextbtn.on('click', function () {
+                    $num += 39;
+                    $small_lunbo.animate({
+                        top: $num + 'px'
+                    }, 500, function () {
+                        if ($num >= 0) {
+                            $num = -195;
+                            $small_lunbo.css({
+                                'top': '-156px'
+                            })
+                        }
+                    });
+
+                });
+                $prevbtn.on('click', function () {
+                    $num += -39;
+                    $small_lunbo.animate({
+                        top: $num + 'px'
+                    }, 500, function () {
+                        if ($num <= -195) {
+                            $num = 0;
+                            $small_lunbo.css({
+                                'top': '0px'
+                            })
+                        }
+                    });
+                });
+
+
+                //搜索框
+                var $search = $('.searchbox input');
+                var $oUl = $('.searchbox ul');
+                // console.log($oUl);
+                $search.on('input propertychange', function () {
+                    $.ajax({
+                        type: "get",
+                        url: "https://www.ingping.com/search/solrCheck?term=" + $(this).val(),
+                        async: true,
+                        dataType: 'jsonp'
+                    }).done(function (data) {
+                        // console.log(data);
+                        $str = '';
+                        $.each(data, function (index, value) {
+                            // console.log(value);
+                            $str += '<li><a href="https://www.ingping.com/search?t=1539480493223&kw=' + value + '&kwIsNot=isNot">' + value + '</a></li>';
+                            // console.log($str);
+                        });
+                        $oUl.html($str);
+                    });
+                });
+
+                $search.focus(function (e) {
+                    e.preventDefault();
+                    $oUl.css('display', 'block');
+                });
+                $search.blur(function (e) {
+                    e.preventDefault();
+                    $oUl.css('display', 'none');
+                });
+
+                //悬浮框
+                var $xuanfu = $('.header_logonav')
+                // console.log($xuanfu);
+                $(window).on('scroll', function () {
+                    var $scrolltop = $(window).scrollTop(); //滚动条的top值。
+                    if ($scrolltop >= 800) {
+                        console.log($xuanfu);
+                        $xuanfu.css({
+                            'position':'fixed',
+                            'top':'0',
+                            'left':'0',
+                            'z-index':'10000',
+                            'background':'#fff',
+                            'height':'110px',
+                            'border-bottom':'2px #ccc solid'
+                        });
+                    }else{
+                        $xuanfu.css({
+                            'position': 'relative',
+                            'height': '100px',
+                            'width': '100%',
+                            'padding-top': '20px',
+                            'margin-bottom': '20px',
+                            'border-bottom':'0'
+                        })
+                    }
+                });
+
+            });
+
+        }(),
+
+        xuanfukuang:!function () {  }(),
+
+
         xiaoguo: ! function () {
             $('.topcontent').load('header.html');
             $('.footercontent').load('footer.html');
@@ -82,7 +363,8 @@ define(['jquery'], function ($) {
                 $('.guesslove').children('ul').eq($(this).index()).css('opacity', '1').siblings($('.guesslove').children('li')).css('opacity', '0');
             });
         }(),
-        shuju:! function () {
+
+        shujuxuanran: ! function () {
             //banner轮播图的数据渲染
             $.ajax({
                 type: 'post',
@@ -103,7 +385,7 @@ define(['jquery'], function ($) {
                 });
                 $('.lunbo_img').html($strhtml);
             });
-        
+
             //猜您喜欢的数据渲染
             $.ajax({
                 type: 'post',
@@ -130,9 +412,9 @@ define(['jquery'], function ($) {
                 });
                 $('.guess-main-1').html($strhtml);
             });
-        
-        
-        
+
+
+
             //最新晒单的数据渲染
             $.ajax({
                 type: 'post',
@@ -167,7 +449,7 @@ define(['jquery'], function ($) {
                 });
                 $('.new-main').html($strhtml);
             });
-        
+
             //音平资讯的数据渲染
             $.ajax({
                 type: 'post',
@@ -194,7 +476,7 @@ define(['jquery'], function ($) {
                 });
                 $('.ypnews-main').html($strhtml);
             });
-        
+
             //商标的数据渲染
             $.ajax({
                 type: 'post',
@@ -213,7 +495,7 @@ define(['jquery'], function ($) {
                 });
                 $('.brands').html($strhtml);
             });
-        
+
             //商品大图数据渲染
             $.ajax({
                 type: 'post',
@@ -265,7 +547,7 @@ define(['jquery'], function ($) {
                         `;
                         $oLeft_pic.eq(5).html($str6);
                     }
-        
+
                 });
             });
             //商品中间数据渲染
@@ -282,7 +564,7 @@ define(['jquery'], function ($) {
                 var $str4 = '';
                 var $str5 = '';
                 var $str6 = '';
-        
+
                 function midpic(value) {
                     var str = '';
                     str += `
@@ -325,7 +607,7 @@ define(['jquery'], function ($) {
                         $str6 += midpic(value);
                         $oMiddle_pic.eq(5).html($str6);
                     }
-        
+
                 });
             });
             //商品小图数据渲染
@@ -342,7 +624,7 @@ define(['jquery'], function ($) {
                 var $str4 = '';
                 var $str5 = '';
                 var $str6 = '';
-        
+
                 function midpic(value) {
                     var str = '';
                     str += `
@@ -385,7 +667,7 @@ define(['jquery'], function ($) {
                         $str6 += midpic(value);
                         $oRight_pic.eq(5).html($str6);
                     }
-        
+
                 });
             });
         }()
@@ -394,9 +676,3 @@ define(['jquery'], function ($) {
 
 
 });
-
-
-
-
-//数据渲染
-//$.ajax+$.each配合

@@ -1,1 +1,1 @@
-require(['cart','details','index','login','louti','sidebar'])
+require(['cart','details','index','login'])

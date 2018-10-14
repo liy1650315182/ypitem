@@ -14,6 +14,7 @@
         display: none;
     }
 }
+
 .d_main {
     width: 100%;
     background-image: url(https://static.ingping.com/yp/images/main_bg-1.0.0.png);
@@ -69,6 +70,7 @@
     visibility: hidden;
     z-index: 10000;
 }
+
 #bf img {
     position: absolute;
     left: 0px;
@@ -76,6 +78,7 @@
     width: 800px;
     height: 800px;
 }
+
 #fdj_list {
     width: 100%;
     margin: 0 auto;
@@ -127,15 +130,14 @@
 
 #right {
     right: 2px;
-    background: url(https://static.ingping.com/yp/images/detail_right-1.0.0.png)
-        no-repeat center center;
+    background: url(https://static.ingping.com/yp/images/detail_right-1.0.0.png) no-repeat center center;
 }
 
 #left {
     left: 1px;
-    background: url(https://static.ingping.com/yp/images/detail_left-1.0.0.png)
-        no-repeat center center;
+    background: url(https://static.ingping.com/yp/images/detail_left-1.0.0.png) no-repeat center center;
 }
+
 .goods_num {
     position: absolute;
     top: 480px;
@@ -146,9 +148,11 @@
     margin-top: 10px;
     width: 100%;
 }
-.share_box{
+
+.share_box {
     position: relative;
 }
+
 .share {
     float: right;
     color: #333;
@@ -158,13 +162,15 @@
     padding-right: 3px;
     position: relative;
 }
+
 .share,
 .collect {
     i {
         color: #f60;
     }
 }
-.share_other{
+
+.share_other {
     display: none;
     width: 100px;
     position: absolute;
@@ -172,10 +178,12 @@
     top: 20px;
     border: 1px solid #ddd;
     padding: 5px 0;
-    img{
-        margin-left:5px;
+
+    img {
+        margin-left: 5px;
     }
 }
+
 .collect {
     float: right;
     color: #333;
@@ -183,18 +191,22 @@
     line-height: 20px;
     margin-right: 10px;
 }
+
 //详情页的右边内容部分
 .d_right {
     float: right;
     width: 770px;
     position: relative;
 }
+
 //内容的左边部分
 .detail_items {
     width: 560px;
 }
+
 .items_name {
     padding: 5px 0 0 0;
+
     h1 {
         line-height: 1.5em;
         overflow: hidden;
@@ -202,6 +214,7 @@
         font-size: 16px;
         color: #333;
     }
+
     p {
         color: #ff6600;
         font-size: 12px;
@@ -210,14 +223,17 @@
         margin-top: 10px;
     }
 }
+
 .summary {
     background-color: #f7f7f7;
     padding: 15px 10px;
     margin: 15px 0px;
 }
+
 .summary-left {
     float: left;
 }
+
 .summary-price {
     margin-bottom: 10px;
     height: 30px;
@@ -231,17 +247,20 @@
     margin-right: 30px;
     line-height: 30px;
 }
+
 .price_c {
     float: left;
     color: #ff6600;
     font-size: 30px;
     margin-right: 3px;
     font-weight: 500;
+
     em {
         margin-right: -8px;
         font-size: 18px;
     }
 }
+
 .price-tip {
     top: -2px;
     color: #06699c;
@@ -249,12 +268,14 @@
     position: relative;
     font-size: 13px;
 }
+
 .vip-price {
     a {
         color: #38d;
         margin-left: 7px;
     }
 }
+
 .only {
     background-color: #ff6600;
     padding: 3px;
@@ -263,6 +284,7 @@
     width: 120px;
     height: 80px;
     position: relative;
+
     &::before {
         content: " ";
         position: absolute;
@@ -275,18 +297,22 @@
         border-left: 5px solid #ff6600;
     }
 }
+
 .summary-right {
     border-left: 1px solid #b7b7b7;
     padding-left: 15px;
     float: right;
+
     a {
         display: block;
         color: #38d;
+
         &:hover {
             color: #38d;
         }
     }
 }
+
 //优惠 促销 配送盒子的样式
 .summary-top {
     padding-left: 10px;
@@ -294,14 +320,17 @@
     width: 100%;
     padding-top: 4px;
 }
+
 //满减 立减
 .gift {
     float: right;
     width: 480px;
     line-height: 30px;
+
     span {
         float: left;
         width: 36px;
+
         em {
             padding: 0 4px;
             color: #fff;
@@ -309,28 +338,34 @@
         }
     }
 }
+
 //满减立减的链接
 .gift-a {
     color: red;
     margin-left: 6px;
 }
+
 //运费说明
 .gift-state {
     color: #06699c;
     margin-left: 10px;
     font-size: 13px;
 }
+
 //立即购买和加入购物车
 .choose {
     width: 100%;
     padding-left: 10px;
 }
+
 .choose_btn {
     margin-bottom: 20px;
 }
+
 .choose_count {
     float: left;
     margin-right: 15px;
+
     input {
         height: 50px;
         width: 30px;
@@ -342,10 +377,12 @@
         line-height: 50px;
     }
 }
+
 .controlNum {
     float: left;
     border: 1px solid #ccc;
     border-left: none;
+
     a {
         display: block;
         height: 24px;
@@ -356,8 +393,17 @@
         box-sizing: border-box;
     }
 }
+
 .buy-add {
     float: left;
+    position: relative;
+    .box1{
+        display: inline-block;
+        width: 168px;
+        height: 50px;
+        position: relative;
+    }
+
     a {
         display: inline-block;
         width: 168px;
@@ -367,17 +413,21 @@
         text-align: center;
         color: #fff;
         margin-left: 3px;
+
         &:hover {
             color: #fff;
         }
     }
+
     .buynow {
         background: #ff0036;
     }
+
     .addcar {
         background: #ff6600;
     }
 }
+
 .phonebuy {
     position: relative;
     margin-left: 10px;
@@ -388,15 +438,16 @@
     height: 50px;
     cursor: pointer;
     border: 1px solid #ddd;
-    background: url(https://static.ingping.com/yp/images/mobile_buy-1.0.1.jpg)
-        10px no-repeat;
+    background: url(https://static.ingping.com/yp/images/mobile_buy-1.0.1.jpg) 10px no-repeat;
     background-position: center center;
+
     &:hover {
         .phonebuy-pic {
             display: block;
         }
     }
 }
+
 .phonebuy-text {
     width: 128px;
     height: 48px;
@@ -404,6 +455,7 @@
     padding-left: 15px;
     font-size: 16px;
 }
+
 .phonebuy-pic {
     display: none;
     position: absolute;
@@ -412,22 +464,26 @@
     height: 122px;
     border: 1px solid #ddd;
     border-width: 1px 1px 0;
+
     img {
         width: 108px;
         height: 108px;
         margin: 7px 10px;
     }
 }
+
 //支付方式
 .zhifu-style {
     line-height: 20px;
     height: 55px;
 }
+
 .styles {
     max-width: 394px;
     float: left;
     width: 480px;
     line-height: 30px;
+
     span {
         float: left;
         position: relative;
@@ -435,12 +491,13 @@
         margin-bottom: 4px;
         height: 20px;
     }
+
     i {
         margin-right: 4px;
     }
+
     .bg_yhk {
-        background: url(https://static.ingping.com/yp/images/bankcard-1.0.0.png)
-            no-repeat;
+        background: url(https://static.ingping.com/yp/images/bankcard-1.0.0.png) no-repeat;
         width: 15px;
         height: 18px;
         display: inline-block;
@@ -448,6 +505,7 @@
         vertical-align: middle;
     }
 }
+
 //其他
 .other-info {
     line-height: 20px;
@@ -455,11 +513,13 @@
     margin-top: 15px;
     padding-left: 5px;
     color: #999;
+
     span {
         margin-right: 5px;
         font-size: 12px;
     }
 }
+
 .info-text {
     border-radius: 10px;
     border: 1px solid #ff6600;
@@ -474,6 +534,7 @@
     right: 0;
     top: 0;
     width: 150px;
+
     strong {
         font-weight: normal;
         display: block;
@@ -481,40 +542,48 @@
         margin-bottom: 10px;
         font-size: 14px;
         text-align: center;
+
         span {
             color: #ddd;
         }
     }
 }
+
 .tab-content {
     border: 1px solid #ddd;
     overflow: hidden;
     position: relative;
     height: 400px;
-    ul{
+
+    ul {
         width: 600px;
         overflow: hidden;
         position: absolute;
         top: 0;
     }
+
     li {
         width: 150px;
         float: left;
     }
+
     a {
         display: block;
         text-align: center;
         padding: 20px 10px;
-        &:hover{
+
+        &:hover {
             color: #333;
         }
     }
+
     ol {
         text-align: center;
         margin: 10px 0;
         position: absolute;
         bottom: 0;
         width: 100%;
+
         span {
             display: inline-block;
             width: 12px;
@@ -525,11 +594,13 @@
             margin: 0 6px;
         }
     }
+
     .active {
         background-color: #f60;
     }
 }
-.tab-dg{
+
+.tab-dg {
     border: 1px solid #ff6600;
     color: #ff6600;
     background-color: #fff;
@@ -537,12 +608,14 @@
     margin-top: 10px;
     padding: 8px 10px;
     display: block;
-    i{
+
+    i {
         vertical-align: middle;
         margin-right: 5px;
         font-size: 22px;
     }
-    span{
+
+    span {
         font-size: 14px;
         vertical-align: middle;
     }

@@ -1,5 +1,6 @@
 define(['jquery', 'jquery.cookie'], function ($) {
 	return {
+
 		details_xiaoguo: ! function () {
 			$('.topcontent').load('header.html');
 			$('.footercontent').load('footer.html');
@@ -156,25 +157,73 @@ define(['jquery', 'jquery.cookie'], function ($) {
 			}
 
 			$('.addcar').on('click', function () {
-				var sid = $(this).parents('.d_main').find('#spic img').attr('sid');
-				// alert(sid);
-				getCookievalue();
-				if($.inArray(sid,sidarr)!=-1){//存在
-					// alert('存在');
-					// console.log(numarr);
-					// console.log($.inArray(sid,sidarr));
-					// console.log(parseInt(numarr[$.inArray(sid,sidarr)]));
-					// console.log(parseInt($('#number').val()));
-					var num=parseInt(numarr[$.inArray(sid,sidarr)])+parseInt($('#number').val());
-					numarr[$.inArray(sid,sidarr)]=num;//新数量覆盖原先的数量
-					addCookie('cartnum',numarr,30);
-				}else{//不存在
-					sidarr.push(sid);
-					addCookie('cartsid',sidarr,30);
-					numarr.push($('#number').val());
-					addCookie('cartnum',numarr,30);
+				if (confirm('已成功加入购物车！')) {
+					var sid = $(this).parents('.d_main').find('#spic img').attr('sid');
+					// alert(sid);
+					getCookievalue();
+					if ($.inArray(sid, sidarr) != -1) { //存在
+
+						// alert('存在');
+						// console.log(numarr);
+						// console.log($.inArray(sid,sidarr));
+						// console.log(parseInt(numarr[$.inArray(sid,sidarr)]));
+						// console.log(parseInt($('#number').val()));
+						var num = parseInt(numarr[$.inArray(sid, sidarr)]) + parseInt($('#number').val());
+						numarr[$.inArray(sid, sidarr)] = num; //新数量覆盖原先的数量
+						addCookie('cartnum', numarr, 30);
+
+					} else { //不存在
+						sidarr.push(sid);
+						addCookie('cartsid', sidarr, 30);
+						numarr.push($('#number').val());
+						addCookie('cartnum', numarr, 30);
+					}
 				}
-			})
+
+			});
+
+			//增加商品数量
+			$('.btn-add').on('click', function (e) {
+				e.preventDefault();
+				var $count = $(this).parents('.choose_count').find('input').val();
+				$count++;
+				if ($count >= 99) {
+					$count = 99;
+				}
+				$(this).parents('.choose_count').find('input').val($count);
+				setcookie($(this));
+			});
+
+			//减少商品数量
+            $('.btn-reduce').on('click', function () {
+                var $count = $(this).parents('.choose_count').find('input').val();
+                $count--;
+                if ($count <= 1) {
+                    $count = 1;
+                }
+                $(this).parents('.choose_count').find('input').val($count);
+                setcookie($(this));
+			});
+			
+			//将改变后的数量的值存放到cookie
+            function setcookie(obj) {
+                cookieToArray();
+                var $index = obj.parents('.d_main').find('#spic img').attr('sid');
+                numarr[sidarr.indexOf($index)] = obj.parents('.d_main').find('.choose_count input').val();
+                addCookie('cartnum', numarr.toString(), 30);
+			}
+			
+			var sidarr = [];
+            var numarr = [];
+            function cookieToArray() {
+                if (getCookie('cartsid')) {
+                    sidarr = getCookie('cartsid').split(',');
+                }
+                if (getCookie('cartnum')) {
+                    numarr = getCookie('cartnum').split(',');
+                }
+            }
+
 		}(),
 
 
@@ -191,7 +240,7 @@ define(['jquery', 'jquery.cookie'], function ($) {
 				$.each(data, function (index, value) {
 					$('#spic img').eq(index).attr({
 						"src": value.url.split(',')[1],
-						"sid":value.sid
+						"sid": value.sid
 					});
 					$('#bf img').eq(index).attr({
 						"src": value.url.split(',')[1]

@@ -479,18 +479,17 @@ input {
     h5 {
         font-size: 12px;
     }
+}
+#login_info {
+    color: #666;
+}
 
-    #login_info {
-        color: #666;
-    }
+#user_info {
+    color: #ddd;
 
-    #user_info {
-        color: #ddd;
-
-        .track {
-            color: #ff6600;
-            padding: 8px 5px;
-        }
+    .track {
+        color: #ff6600;
+        padding: 8px 5px;
     }
 }
 

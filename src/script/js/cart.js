@@ -65,14 +65,11 @@ define(['jquery', 'jquery.cookie'], function ($) {
                     }
                 });
                 $('.totalprice em').html(total.toFixed(2)); //总价
-                $('.allneed em').html((total - 299.00).toFixed(2)); //优惠后的价格
+                $('.allneed em').html((total).toFixed(2)); //优惠后的价格
                 $('.all_num').html(countnum); //物品数量
                 $('#shopcart .amount').html(countnum);
             }
 
-            $(document).on('click',function () { 
-                // alert($('#shopcart .amount').html());
-             })
 
             //增加商品数量
             $('#num_add').on('click', function (e) {

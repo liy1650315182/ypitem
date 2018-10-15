@@ -804,13 +804,15 @@ input {
 .tnleft h5 {
   font-size: 12px;
 }
-.tnleft #login_info {
+
+#login_info {
   color: #666;
 }
-.tnleft #user_info {
+
+#user_info {
   color: #ddd;
 }
-.tnleft #user_info .track {
+#user_info .track {
   color: #ff6600;
   padding: 8px 5px;
 }

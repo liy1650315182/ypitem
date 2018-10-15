@@ -247,29 +247,27 @@ define(['jquery'], function ($) {
                 });
 
                 //悬浮框
-                var $xuanfu = $('.header_logonav')
+                var $xuanfu = $('.xuanfu')
                 // console.log($xuanfu);
                 $(window).on('scroll', function () {
                     var $scrolltop = $(window).scrollTop(); //滚动条的top值。
-                    if ($scrolltop >= 800) {
-                        console.log($xuanfu);
+                    if ($scrolltop >= 400) {
+                        // console.log($xuanfu);
                         $xuanfu.css({
+                            'display':'block',
                             'position':'fixed',
                             'top':'0',
                             'left':'0',
-                            'z-index':'10000',
+                            'z-index':'9999',
+                            'width': '100%',
+                            'margin': '0 auto',
                             'background':'#fff',
-                            'height':'110px',
-                            'border-bottom':'2px #ccc solid'
+                            'padding-left':'100px',
+                            'border-bottom':'2px #aaa solid'
                         });
                     }else{
                         $xuanfu.css({
-                            'position': 'relative',
-                            'height': '100px',
-                            'width': '100%',
-                            'padding-top': '20px',
-                            'margin-bottom': '20px',
-                            'border-bottom':'0'
+                            'display':'none'
                         })
                     }
                 });
@@ -277,9 +275,6 @@ define(['jquery'], function ($) {
             });
 
         }(),
-
-        xuanfukuang:!function () {  }(),
-
 
         xiaoguo: ! function () {
             $('.topcontent').load('header.html');

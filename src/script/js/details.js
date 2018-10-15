@@ -136,13 +136,11 @@ define(['jquery', 'jquery.cookie'], function ($) {
 					'background': '#f60',
 					'color': '#fff'
 				});
-				$('.my_link').css('background-position', '-33px 0');
 			}, function () {
 				$(this).css({
 					'background': '#fff',
 					'color': '#f60'
 				});
-				$('.my_link').css('background-position', '0 0')
 			});
 
 			//商品加入购物车
